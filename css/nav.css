@@ -1,0 +1,54 @@
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+@import "main.css";
+
+.navbar {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+
+    /* 水平置中 */
+    justify-content: center;
+    /* 垂直置中 */
+    align-items: center;
+
+    padding: 40px 20px;
+
+    /*  background-color: aqua; */
+}
+
+.navbar>img {
+    margin: 0 0 20px 0;
+    /* background-color: rgb(246, 255, 0); */
+}
+
+#navBlockText {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#navBlockText>button {
+    text-align: center;
+    text-decoration: none;
+    font-family: "GenJyuuGothic-B";
+    color: var(--myYellow);
+    font-size: var(--pContent);
+
+    background-color: #0f2d2878;
+    
+    border-style: none;
+    margin: 3px;
+}
+
+#navBlockText a{
+text-decoration: none;
+}
+
+#navBlockText>button:hover {
+    color: var(--myWhite);
+    transition: 0.3s ease;
+}

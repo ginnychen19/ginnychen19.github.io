@@ -1,0 +1,75 @@
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+@import "header.css";
+@import "nav.css";
+@import "contactMe.css";
+@import "processAndProblem.css";
+@import "portfolio.css";
+
+
+@font-face {
+    font-family: "GenJyuuGothic-L";
+    src: url("../ttc/GenSenRounded-L.ttc");
+}
+
+@font-face {
+    font-family: "GenJyuuGothic-B";
+    src: url("../ttc/GenSenRounded-B.ttc")
+}
+
+@font-face {
+    font-family: "GenJyuuGothic-H";
+    src: url("../ttc/GenSenRounded-H.ttc");
+}
+
+:root {
+    --myWhite: #e9e0d9;
+    --myYellow: #C7933F;
+    --myYellowHover: #fea520;
+    --myDGreen: #0F2D28;
+    --myGreen: #344823;
+    --myLGreen: #6e954c;
+    --myBrown: #934723;
+
+    --pLabel: 80px;
+    --pBTitle: 58px;
+    --pMTitle: 40px;
+    --pSTitle: 28px;
+    --pContent: 18px;
+    --pSContent: 14px;
+}
+
+h1{
+    font-family: "GenJyuuGothic-H";
+    font-size: var(--pLabel);
+}
+
+h4{
+    font-family: "GenJyuuGothic-H";
+    font-size: var(--pBTitle);
+}
+h6{
+    font-family: "GenJyuuGothic-B";
+    font-size: var(--pSTitle);
+}
+
+p {
+    font-family: "GenJyuuGothic-L";
+    font-size: var(--pContent);
+}
+
+
+#canvas1 {
+    z-index: -100;
+    position: absolute;
+  }
+  
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    color: var(--myDGreen);
+    background-color: var(--myYellow);
+    
+}

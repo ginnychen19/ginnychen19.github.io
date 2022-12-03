@@ -5,22 +5,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
+    <title>大麻教繪</title>
+    <link href="./img/marijuana.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/test.css">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Document</title>
 </head>
 
-<body>
+
+<body style="margin:0">
+    <!--封面動畫頁-->
+    <header class="header">
+        <div class="MyGirl">
+            <div class="bg">
+                <div>
+                    <div id="MyT" 
+                    style="letter-spacing:10px ;
+                    color: var(--myWhite);
+                    text-shadow: 0 0 10px var(--myLGreen);">
+                        <h1 class="animate__animated animate__bounce animate__infinite">大麻教繪</h1>
+                    </div>
+                    <div class="dialogue">
+                        <h6 id="dialogueText">...</h6>
+                        <div class="ans" style="display:none">
+                            <button><a href="#processAndProblem">委託</a></button>
+                            <button><a href="https://www.facebook.com/107051064elizabeth/">主頁</a></button>
+                        </div>
+                    </div>
+                    <img id="MyG" onclick="typeWriter()" src="./img/svg/MyG_ANI02.svg">
+                </div>
+            </div>
+        </div>
+        <div class="headline">
+            <div>
+                <h1 class="animate__animated animate__bounce animate__infinite">大麻教繪</h1>
+            </div>
+            <div class="HBtns">
+                <div onmouseover="onhoverfb(this)" onmouseout="normalfb(this)">
+                    <img class="fb" src="./img/svg/facebook_H.svg" alt="fb_H">
+                    <h6><a href="https://www.facebook.com/107051064elizabeth/" id="fb" target="_blank"></a></h6>
+                </div>
+                <div onmouseover="onhoverins(this)" onmouseout="normalins(this)">
+                    <img class="ins" src="./img/svg/instagram_H.svg" alt="ins_H">
+                    <h6><a href="https://www.instagram.com/ginnychen19/" id="ins" target="_blank"></a></h6>
+                </div>
+                <div onmouseover="onhoverPixiv(this)" onmouseout="normalPixiv(this)">
+                    <img class="Pixiv" src="./img/svg/Pixiv_H.svg" alt="/Pixiv_H">
+                    <h6><a href="https://www.pixiv.net/users/8585053" id="Pixiv" target="_blank"></a></h6>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--nav快速導覽列-->
+    <nav class="navbar">
+        <img src="img/svg/Weed_BackToTop.svg" alt="BackToTop" h>
+        <div id="navBlockText">
+            <button><a href="#portfolio">作品展示</a></button>
+            <button><a href="#process">委託流程</a></button>
+            <button><a href="#problem">常見問題</a></button>
+            <button><a href="#contactMe">連絡我</a></button>
+        </div>
+    </nav>
+
+    <!--作品展示頁-->
+    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+        <div class="w3-modal-content w3-animate-zoom">
+            <img id="img01" style="width:100%">
+        </div>
+    </div>
     <div id="portfolio" class="portfolio">
         <div class="book">
             <div class="pages">
                 <div class="mainMenu">
                     <a onclick="plusMenu(-1)">◀</a>
+                    <h4 class="menutitle">Q版</h4>
                     <h4 class="menutitle">大頭貼</h4>
                     <h4 class="menutitle">一般插圖</h4>
-                    <h4 class="menutitle">精緻稿</h4>
+                    <h4 class="menutitle">立繪</h4>
+                    <h4 class="menutitle">精緻圖</h4>
                     <a onclick="plusMenu(1)">▶</a>
                 </div>
                 <div class="minText">
@@ -29,75 +93,478 @@
                         以最終報價為準，歡迎詢問
                     </p>
                 </div>
+                <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img id="img01" style="width:100%; ">
+                    </div>
+                </div>
                 <div class="pics">
-                    <div class="slideshow-container menupic">
-                        <div class="mySlides fade myPic01">
-                            <img src="./img/精緻稿01.png">
+                    <div class="menupic">
+                        <div class="slideshow-container">
+                            <div class="slideshow-container-flex">
+                                <div class="mySlides fade myPic01">
+                                    <img src="./img/Q版01.jpg" onclick="onClick(this)">
+                                    <!-- <div class="text">Caption Text</div> -->
+                                </div>
+                                <div class="mySlides fade myPic01">
+                                    <img src="./img/Q版02.png" onclick="onClick(this)">
+                                </div>
+                                <div class="mySlides fade myPic01">
+                                    <img src="./img/Q版03.png" onclick="onClick(this)">
+                                </div>
+                                <div class="mySlides fade myPic01">
+                                    <img src="./img/Q版04.png" onclick="onClick(this)">
+                                </div>
+                                <a class="prev" onclick="plusSlides01(-1)">❮</a>
+                                <a class="next" onclick="plusSlides01(1)">❯</a>
+                            </div>
                         </div>
-                        <div class="mySlides fade myPic01">
-                            <img src="img/精緻稿02.jpg" style="width:50%;">
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide01(1)"></span>
+                            <span class="dot" onclick="currentSlide01(2)"></span>
+                            <span class="dot" onclick="currentSlide01(3)"></span>
+                            <span class="dot" onclick="currentSlide01(4)"></span>
                         </div>
-                        <div class="mySlides fade myPic01">
-                            <img src="img/精緻稿03.jpg">
-                        </div>
-                        <div class="mySlides fade myPic01">
-                            <img src="img/精緻稿04.jpg" style="width:50%;">
-                        </div>
-
-
-                        <a class="prev" onclick="plusSlides01(-1)">❮</a>
-                        <a class="next" onclick="plusSlides01(1)">❯</a>
                     </div>
-                    <div class="slideshow-container menupic">
-                        <div class="mySlides fade myPic02">
-                            <img src="img/Q版01.jpg">
+                    <div class="menupic">
+                        <div class="slideshow-container">
+                            <div class="mySlides fade myPic02">
+                                <img src="img/大頭照01.jpg" onclick="onClick(this)">
+                                <!-- <div class="text">Caption Text</div> -->
+                            </div>
+                            <div class="mySlides fade myPic02">
+                                <img src="img/大頭照02.png" onclick="onClick(this)">
+                            </div>
+                            <div class="mySlides fade myPic02">
+                                <img src="img/大頭照03.jpg" onclick="onClick(this)">
+                            </div>
+                            <a class="prev" onclick="plusSlides02(-1)">❮</a>
+                            <a class="next" onclick="plusSlides02(1)">❯</a>
                         </div>
-                        <div class="mySlides fade myPic02">
-                            <img src="img/Q版02.png">
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide02(1)"></span>
+                            <span class="dot" onclick="currentSlide02(2)"></span>
+                            <span class="dot" onclick="currentSlide02(3)"></span>
                         </div>
-                        <div class="mySlides fade myPic02">
-                            <img src="img/Q版03.png">
-                        </div>
-
-                        <a class="prev" onclick="plusSlides02(-1)">❮</a>
-                        <a class="next" onclick="plusSlides02(1)">❯</a>
                     </div>
-                    <div class="slideshow-container menupic">
-                        <div class="mySlides fade">
-                            <img src="img/立繪01.png">
+                    <div class="menupic">
+                        <div class="slideshow-container">
+                            <div class="slideshow-container-flex">
+                                <div class="mySlides fade myPic03">
+                                    <img src="./img/一般插圖01.jpg" onclick="onClick(this)">
+                                    <div class="text">點擊看完整圖</div>
+                                </div>
+                                <div class="mySlides fade myPic03">
+                                    <img src="./img/一般插圖02.jpg" onclick="onClick(this)">
+                                    <div class="text">點擊看完整圖</div>
+                                </div>
+                                <div class="mySlides fade myPic03">
+                                    <img src="./img/一般插圖03.jpg" onclick="onClick(this)">
+                                    <div class="text">點擊看完整圖</div>
+                                </div>
+                                <div class="mySlides fade myPic03">
+                                    <img src="./img/一般插圖04.jpg" onclick="onClick(this)">
+                                    <div class="text">點擊看完整圖</div>
+                                </div>
+                                <div class="mySlides fade myPic03">
+                                    <img src="./img/一般插圖05.jpg" onclick="onClick(this)">
+                                    <div class="text">點擊看完整圖</div>
+                                </div>
+                                <a class="prev" onclick="plusSlides03(-1)">❮</a>
+                                <a class="next" onclick="plusSlides03(1)">❯</a>
+                            </div>
                         </div>
-                        <div class="mySlides fade">
-                            <img src="img/立繪02.png">
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide03(1)"></span>
+                            <span class="dot" onclick="currentSlide03(2)"></span>
+                            <span class="dot" onclick="currentSlide03(3)"></span>
+                            <span class="dot" onclick="currentSlide03(4)"></span>
+                            <span class="dot" onclick="currentSlide03(5)"></span>
                         </div>
-                        <div class="mySlides fade">
-                            <img src="img/立繪03.png">
-                        </div>
-                        <div class="mySlides fade">
-                            <img src="img/立繪04.png">
-                        </div>
-
-                        <a class="prev" onclick="plusSlides(-1)">❮</a>
-                        <a class="next" onclick="plusSlides(1)">❯</a>
                     </div>
+                    <div class="menupic">
+                        <div class="slideshow-container">
+                            <div class="slideshow-container-flex">
+                                <div class="mySlides fade myPic04">
+                                    <img src="./img/立繪01.png" onclick="onClick(this)">
+                                    <div class="text">點擊看完整圖</div>
+                                </div>
+                                <div class="mySlides fade myPic04">
+                                    <img src="./img/立繪02.png" onclick="onClick(this)">
+                                    <div class="text">點擊看完整圖</div>
+                                </div>
+                                <div class="mySlides fade myPic04">
+                                    <img src="./img/立繪03.png" onclick="onClick(this)">
+                                    <div class="text">點擊看完整圖</div>
+                                </div>
+                                <div class="mySlides fade myPic04">
+                                    <img src="./img/立繪04.png" onclick="onClick(this)">
+                                    <div class="text">點擊看完整圖</div>
+                                </div>
+                                <a class="prev" onclick="plusSlides04(-1)">❮</a>
+                                <a class="next" onclick="plusSlides04(1)">❯</a>
+                            </div>
+                        </div>
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide04(1)"></span>
+                            <span class="dot" onclick="currentSlide04(2)"></span>
+                            <span class="dot" onclick="currentSlide04(3)"></span>
+                            <span class="dot" onclick="currentSlide04(4)"></span>
+                        </div>
+                    </div>
+                    <div class="menupic">
+                        <div class="slideshow-container">
+                            <div class="slideshow-container-flex">
+                                <div class="mySlides fade myPic05">
+                                    <img src="./img/精緻稿01.png" onclick="onClick(this)">
+                                </div>
+                                <div class="mySlides fade myPic05">
+                                    <img src="./img/精緻稿02.jpg" onclick="onClick(this)">
+                                    <div class="text">點擊看完整圖</div>
+                                </div>
+                                <div class="mySlides fade myPic05">
+                                    <img src="./img/精緻稿03.jpg" onclick="onClick(this)">
+                                </div>
+                                <div class="mySlides fade myPic05">
+                                    <img src="./img/精緻稿04.jpg" onclick="onClick(this)">
+                                    <div class="text">點擊看完整圖</div>
+                                </div>
+                                <a class="prev" onclick="plusSlides05(-1)">❮</a>
+                                <a class="next" onclick="plusSlides05(1)">❯</a>
+                            </div>
+                        </div>
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide05(1)"></span>
+                            <span class="dot" onclick="currentSlide05(2)"></span>
+                            <span class="dot" onclick="currentSlide05(3)"></span>
+                            <span class="dot" onclick="currentSlide05(4)"></span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
         <div class="prices">
             <div class="menuprice">
-                <h4>My Name01</h4>
+                <h4>作品展示</h4>
+                <p>700x700px 300dpi</p>
+                <p>向量類型可製作動態，但是價格一拆件多寡增加</p>
+                <p>通常預設為全身、無背景、平塗</p>
+                <hr>
+                <h6>價格</h6>
+                <p>預設：???NTD</p>
+                <p>有背景(排版)：+150NTD↑</p>
+                <p>有背景(建築)：+350NTD↑</p>
+                <p>厚塗：+150NTD↑</p>
             </div>
             <div class="menuprice">
-                <h4>My Name02</h4>
-                <p>Some text about me.</p>
+                <h4>作品展示</h4>
+                <p>700x700px 300dpi</p>
+                <p>22222222222222222222</p>
+                <hr>
+                <h6>價格</h6>
+                <p>預設：???NTD</p>
+                <p>有背景(排版)：+150NTD↑</p>
+                <p>有背景(建築)：+350NTD↑</p>
+                <p>厚塗：+150NTD↑</p>
             </div>
             <div class="menuprice">
-                <h4>My Name03</h4>
-                <p>Some text about me.</p>
-                <p>mail: example@example.com</p>
+                <h4>作品展示</h4>
+                <p>700x700px 300dpi</p>
+                <p>33333333333333333333333333</p>
+                <hr>
+                <h6>價格</h6>
+                <p>預設：???NTD</p>
+                <p>有背景(排版)：+150NTD↑</p>
+                <p>有背景(建築)：+350NTD↑</p>
+                <p>厚塗：+150NTD↑</p>
+            </div>
+            <div class="menuprice">
+                <h4>作品展示</h4>
+                <p>700x700px 300dpi</p>
+                <p>444444444444444444</p>
+                <hr>
+                <h6>價格</h6>
+                <p>預設：???NTD</p>
+                <p>有背景(排版)：+150NTD↑</p>
+                <p>有背景(建築)：+350NTD↑</p>
+                <p>厚塗：+150NTD↑</p>
+            </div>
+            <div class="menuprice">
+                <h4>作品展示</h4>
+                <p>700x700px 300dpi</p>
+                <p>555555555555555555555</p>
+                <hr>
+                <h6>價格</h6>
+                <p>預設：???NTD</p>
+                <p>有背景(排版)：+150NTD↑</p>
+                <p>有背景(建築)：+350NTD↑</p>
+                <p>厚塗：+150NTD↑</p>
             </div>
         </div>
     </div>
 
+
+
+    <!--使用電腦的時候-->
+    <div id="processAndProblem-C" class="processAndProblem">
+        <div id="process" class="process animate__animated animate__fadeInUp">
+            <div style="flex: 1">
+                <h4>委託流程</h4>
+            </div>
+            <div class="process01" style="flex: 6">
+                <div>
+                    <h6>1.確認委託內容</h6>
+                    <p>◆確認可接後，我會聯繫報價與確認繪製詳情</p>
+                </div>
+                <div>
+                    <h6>2.支付訂金20%</h6>
+                    <p>◆若&lt 1000NTD 正式草圖確認後付款即可</p>
+                </div>
+                <div>
+                    <h6>3.簡易草構圖確認</h6>
+                    <p> 主要確認整體構圖、動作</p>
+                </div>
+                <div>
+                    <h6>4.正式草圖確認</h6>
+                    <p>確認整體色彩、光影</p>
+                </div>
+                <div>
+                    <h6>5.支付剩餘費用</h6>
+                </div>
+                <div>
+                    <h6>6.委託完成交件</h6>
+                </div>
+            </div>
+        </div>
+        <!--常見問題頁-->
+        <div id="problem" class="problem animate__animated animate__fadeInUp">
+            <div style="flex: 1">
+                <h4>常見問題</h4>
+            </div>
+            <div class="problem01" style="flex: 5">
+                <div>
+                    <h6>Q.</h6>
+                    <select id="sltQ" name="ProblemQ">
+                        <option value="#Q_1">請選擇想知道的問題！</option>
+                        <option value="#Q_1">付款方式</option>
+                        <option value="#Q_2">草稿階段相關</option>
+                        <option value="#Q_3">利用範圍與注意事頂</option>
+                        <option value="#Q_4">取消委託相關</option>
+                    </select>
+                </div>
+                <div>
+                    <h6>A.</h6>
+                    <div id="Q_1" style="padding:20px 0 0 10px">
+                        ◆郵局無摺<br><br>
+                        ◆轉帳匯款<br><br>
+                        ◆蝦皮
+                    </div>
+                    <div id="Q_2" style="padding:20px 0 0 10px">
+                        草稿大約等待7~14天(從詢問時給予的排單日期算起)<br>
+                        <br>
+                        以下天數皆從&nbsp<strong>正式草圖確認</strong>&nbsp開始計算<br>
+                        ◆頭貼/Q版 7~10天<br>
+                        ◆一般插圖 3週<br>
+                        ◆立繪 1個月<br>
+                        ◆精緻圖 約1-2個月<br>
+                        <br><br>
+                        <strong>關於草稿階段修改</strong><br>
+                        角色設定作畫錯誤不會算進次數內，完稿後不接受過大幅度的修改。<br>
+                        超過次數的後續修改將額外收費<br>
+
+
+                    </div>
+                    <div id="Q_3" style="padding:20px 0 0 10px">
+                        ◆利用範圍與著作權非買斷，我方有權公開加上浮水印之委託縮圖<br><br>
+                        ◆接受項目網路上使用及發佈(發表時標注繪者)少量自用印刷/周邊制作(非營利)TRPG及企劃之使用<br><br>
+                        ◆禁止項目任何修改稿件的後製加工(僅接受裁剪、縮放)同人利益與商業使用公開宣稱為自己作品<br><br>
+                        ◆任何上述未列出且無事先詢問的用途，一律預設為""禁止""​<br><br>
+                        ◆本站價目表皆為非商業使用，商用稿件請另行私訊報價<br>
+                    </div>
+                    <div id="Q_4" style="padding:20px 0 0 10px">
+                        <strong>若委託人想取消委託</strong><br>
+                        ◆未付全額的階段，取消委託將不退回訂金，請謹慎考慮後再委託<br>
+                        ◆若已付全額，將依據目前作畫完成度比例計算退款<br>
+                        ◆一旦取消委託，作畫過程中所提供的任何階段圖，委託人都禁止使用<br>
+                        ​<br>
+                        <strong>由我方取消委託的情況</strong><br>
+                        ◆在無告知事由的情況下，超過7日未支付訂金，將取消委託<br>
+                        ◆正式草稿確認後，在無告知事由的情況下，超過14日未支付剩餘款項，將取消委託，且不退還訂金<br>
+                        ◆我方傳送進度後，超過7日未得到回覆且聯絡不上委託人時，將取消委託，且不退還訂金<br>
+                        ◆無論任何階段，若是因我方個人因素取消委託，都將退還訂金or全額<br>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--連絡我-->
+    <div id="contactMe" class="contactMe">
+        <div style="flex: 1">
+            <h4>&nbsp聯絡我</h4>
+            <p>ginnychen19@gmail.com</p>
+        </div>
+        <div class="contactMe01" style="flex: 3">
+            <div style="flex:1 ">
+                <form action="">
+                    <div>
+                        <img src="./img/svg/Weed.svg" style="width:30px;">
+                        <label for="username"> &nbsp&nbsp您的大名：</label>
+                    </div>
+                    <input type="text" id="username" name="username" required>
+                    <div>
+                        <img src="./img/svg/Weed.svg" style="width:30px;">
+                        <label for="Mail"> &nbsp&nbsp您的信箱：</label>
+                    </div>
+                    <input type="text" id="Mail" name="Mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                    <div style="align-items: flex-start ">
+                        <img src="./img/svg/Weed.svg" style="width:30px;">
+                        <label for="entrustDetail"> &nbsp&nbsp委託詳細：</label>
+                    </div>
+                    <!-- <input type="textbox" id="entrustDetail" name="entrustDetail" required> -->
+                    <textarea id="entrustDetail" name="entrustDetail" rows="6" cols="20"></textarea>
+                    <input type="submit" value="送出">
+                </form>
+            </div>
+            <div style="flex:1">
+                <h6>需求格式建議</h6>
+                <p>
+                    預算範圍：<br>
+                    希望的截稿日：<br>具體日期或某個期限<br>
+                    需求說明：<br>要畫什麼(誰)、尺寸、具體內容(人物互動或環境)<br>
+                    委託類型：<br>Q版/大頭貼/一般插圖/立繪/精緻稿<br>
+                    上色類型：平塗/厚塗/向量<br>
+                    用途：非商業/商業<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--聯絡資訊、隱私權政策 (Private Policy)
+        社群連結 icon 按鈕圖示 (如Facebook、Twitter、IG等)
+        服務條款 (Terms of Service)、版權聲明 (Copyright Information)-->
+
+    <footer class="footer">
+        <p style="font-family: GenJyuuGothic-B">
+            Please do not reprint without my permission.<br>
+            Copyright © 2018-2022 大麻仙子 All Rights Reserved.
+        </p>
+    </footer>
+
+    <canvas id="canvas1"></canvas>
+
+
+
+
+    <!--說話程式-->
+    <script>
+        var i = 0;
+        var txt = '歡迎呀，想知道什麼資訊呢?';
+        var speed = 100;
+
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("dialogueText").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+            document.getElementById("dialogue").style.display = "block";
+        }
+    </script>
+
+    <!--連結滑入程式-->
+    <script>
+        function onhoverfb(x) {
+            document.getElementsByClassName("fb").src = "./img/svg/facebook_D.svg";
+            document.getElementById("fb").innerHTML = "伊莉莎白";
+        }
+        function normalfb(x) {
+            document.getElementsByClassName("fb").src = "./img/svg/facebook_H.svg";
+            document.getElementById("fb").innerHTML = "";
+        }
+        function onhoverins(x) {
+            document.getElementsByClassName("ins").src = "./img/svg/instagram_D.svg";
+            document.getElementById("ins").innerHTML = "@ginnychen19";
+        }
+        function normalins(x) {
+            document.getElementsByClassName("ins").src = "./img/svg/instagram_H.svg";
+            document.getElementById("ins").innerHTML = "";
+        }
+        function onhoverPixiv(x) {
+            document.getElementsByClassName("Pixiv").src = "./img/svg/Pixiv_D.svg";
+            document.getElementById("Pixiv").innerHTML = "大麻仙子";
+        }
+        function normalPixiv(x) {
+            document.getElementsByClassName("Pixiv").src = "./img/svg/Pixiv_H.svg";
+            document.getElementById("Pixiv").innerHTML = "";
+        }
+
+
+    </script>
+
+
+    <!--飄紙程式-->
+    <script type="text/javascript" src="./confetti-js-master/dist/index.min.js"></script>
+    <script type="text/javascript">
+        var canvas1Settings = {
+            target: 'canvas1',
+            max: 500,
+            size: 1,
+            props: ['square',
+                'triangle',
+                { 'type': 'svg', 'src': 'img/svg/Weed_dark.svg' },
+            ],
+            colors: [[233, 224, 217], [254, 162, 32], [110, 149, 76]],
+            clock: 3,
+            width: "1900",
+            height: "3500",
+            start_from_edge: false,
+            respawn: true
+        };
+        var canvas1 = new ConfettiGenerator(canvas1Settings);
+        canvas1.render();
+
+        var canvas2Settings = {
+            target: 'canvas2',
+            max: 300,
+            size: 0.6,
+            props: ['square',
+                'triangle',
+                { 'type': 'svg', 'src': 'img/svg/Weed_dark.svg' },
+            ],
+            colors: [[233, 224, 217], [254, 162, 32], [110, 149, 76]],
+            clock: 3
+        };
+        var canvas2 = new ConfettiGenerator(canvas2Settings);
+        canvas2.render();
+
+        var canvas3Settings = {
+            target: 'canvas3',
+            max: 300,
+            size: 0.6,
+            props: ['square',
+                'triangle',
+                { 'type': 'svg', 'src': 'img/svg/Weed_dark.svg' },
+            ],
+            colors: [[233, 224, 217], [254, 162, 32], [110, 149, 76]],
+            clock: 3
+        };
+        var canvas3 = new ConfettiGenerator(canvas3Settings);
+        canvas3.render();
+
+    </script>
+
+    <!--portfolio頁---------------------------------------------------------->
     <!--輪播pic01程式-->
     <script>
         let Pic01Index = 1;
@@ -108,6 +575,11 @@
             showPic01(Pic01Index += n);
         }
         //若呼叫plusSlides()，執行 showSlides 並執行n+1
+
+        function currentSlide01(n) {
+            showPic01(Pic01Index = n);
+        }
+        //若呼叫currentSlide01()，執行showPic01 並Pic01Index會等於當前數值
 
         function showPic01(n) {
             let i;
@@ -133,35 +605,93 @@
     <script>
         let Pic02Index = 1;
         showPic02(Pic02Index);
-        //編號預設等於1 ，將1帶入並執行showSlides
-
         function plusSlides02(n) {
             showPic02(Pic02Index += n);
         }
-        //若呼叫plusSlides()，執行 showSlides 並執行n+1
-
+        function currentSlide02(n) {
+            showPic02(Pic02Index = n);
+        }
         function showPic02(n) {
             let i;
             let Pic02s = document.getElementsByClassName("myPic02");
-            //slides 是抓到全部的div
-
-            //n，表示當前數字(this)
-            //如果當前累加數字超過原數量，數字變回1
             if (n > Pic02s.length) { Pic02Index = 1 }
-            //如果當前累加數字<1，數字變回總長
             if (n < 1) { Pic02Index = Pic02s.length }
-
-            //for(給初始值；給做的條件；遞增的方式 )
-            //全部變關閉狀態
             for (i = 0; i < Pic02s.length; i++) {
                 Pic02s[i].style.display = "none";
             }
-            //slides[slideIndex - 1]是當前這個，打開
             Pic02s[Pic02Index - 1].style.display = "block";
         }
     </script>
-
-
+    <!--輪播pic03程式-->
+    <script>
+        let Pic03Index = 1;
+        showPic03(Pic03Index);
+        function plusSlides03(n) {
+            showPic03(Pic03Index += n);
+        }
+        function currentSlide03(n) {
+            showPic03(Pic03Index = n);
+        }
+        function showPic03(n) {
+            let i;
+            let Pic03s = document.getElementsByClassName("myPic03");
+            if (n > Pic03s.length) { Pic03Index = 1 }
+            if (n < 1) { Pic03Index = Pic03s.length }
+            for (i = 0; i < Pic03s.length; i++) {
+                Pic03s[i].style.display = "none";
+            }
+            Pic03s[Pic03Index - 1].style.display = "block";
+        }
+    </script>
+    <!--輪播pic04程式-->
+    <script>
+        let Pic04Index = 1;
+        showPic04(Pic04Index);
+        function plusSlides04(n) {
+            showPic04(Pic04Index += n);
+        }
+        function currentSlide04(n) {
+            showPic04(Pic04Index = n);
+        }
+        function showPic04(n) {
+            let i;
+            let Pic04s = document.getElementsByClassName("myPic04");
+            if (n > Pic04s.length) { Pic04Index = 1 }
+            if (n < 1) { Pic04Index = Pic04s.length }
+            for (i = 0; i < Pic04s.length; i++) {
+                Pic04s[i].style.display = "none";
+            }
+            Pic04s[Pic04Index - 1].style.display = "block";
+        }
+    </script>
+    <!--輪播pic05程式-->
+    <script>
+        let Pic05Index = 1;
+        showPic05(Pic05Index);
+        function plusSlides05(n) {
+            showPic05(Pic05Index += n);
+        }
+        function currentSlide05(n) {
+            showPic05(Pic05Index = n);
+        }
+        function showPic05(n) {
+            let i;
+            let Pic05s = document.getElementsByClassName("myPic05");
+            if (n > Pic05s.length) { Pic05Index = 1 }
+            if (n < 1) { Pic05Index = Pic05s.length }
+            for (i = 0; i < Pic05s.length; i++) {
+                Pic05s[i].style.display = "none";
+            }
+            Pic05s[Pic05Index - 1].style.display = "block";
+        }
+    </script>
+    <!--圖片點擊放大-->
+    <script>
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+        }
+    </script>
     <!--換Menudiv程式-->
     <script>
         let MenuIndex = 1;
@@ -170,17 +700,16 @@
         showPics(picsIndex);
         let priceIndex = 1;
         showprices(priceIndex);
-        
+
         function plusMenu(n) {
             showMenus(MenuIndex += n);
             showPics(picsIndex += n);
             showprices(priceIndex += n);
         }
-
         function showMenus(n) {
             let j;
             let titles = document.getElementsByClassName("menutitle");
-    
+
             if (n > titles.length) { MenuIndex = 1 }
             if (n < 1) { MenuIndex = titles.length }
 
@@ -192,41 +721,44 @@
         function showPics(n) {
             let k;
             let pics = document.getElementsByClassName("menupic");
-            //slides 是抓到全部的div
 
-            //n，表示當前數字(this)
-            //如果當前累加數字超過原數量，數字變回1
             if (n > pics.length) { picsIndex = 1 }
-            //如果當前累加數字<1，數字變回總長
             if (n < 1) { picsIndex = pics.length }
 
-            //for(給初始值；給做的條件；遞增的方式 )
-            //全部變關閉狀態
             for (k = 0; k < pics.length; k++) {
                 pics[k].style.display = "none";
             }
-            //slides[slideIndex - 1]是當前這個，打開
             pics[picsIndex - 1].style.display = "block";
         }
         function showprices(n) {
             let k;
             let prices = document.getElementsByClassName("menuprice");
-            //slides 是抓到全部的div
 
-            //n，表示當前數字(this)
-            //如果當前累加數字超過原數量，數字變回1
             if (n > prices.length) { priceIndex = 1 }
-            //如果當前累加數字<1，數字變回總長
             if (n < 1) { priceIndex = prices.length }
-
-            //for(給初始值；給做的條件；遞增的方式 )
-            //全部變關閉狀態
             for (k = 0; k < prices.length; k++) {
                 prices[k].style.display = "none";
             }
-            //slides[slideIndex - 1]是當前這個，打開
             prices[priceIndex - 1].style.display = "block";
         }
+    </script>
+
+    <!--processAndProblem頁---------------------------------------------------------->
+    <!--select換區程式-->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(function () {
+            //全部選擇隱藏
+            $('div[id^="Q_"]').hide();
+            $('#sltQ').change(function () {
+                let sltValue = $(this).val();
+                console.log(sltValue);
+
+                $('div[id^="Q_"]').hide();
+                //指定選擇顯示
+                $(sltValue).show();
+            });
+        });
     </script>
 
 </body>

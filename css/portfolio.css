@@ -1,0 +1,248 @@
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+@import "main.css";
+
+@media (max-width: 4096px) {
+    .portfolio {
+        display: flex;
+        justify-content: center;
+    }
+
+    .book {
+        background-color: var(--myBrown);
+        padding: 20px;
+        border-radius: 10px;
+        transform: rotate(-3deg);
+        margin: 0 40px 0 0;
+    }
+
+    .pages {
+        background-color: azure;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        padding: 60px 20px 20px 20px;
+    }
+
+    .mainMenu {
+        display: flex;
+        align-items: center;
+    }
+
+    .mainMenu>h4 {
+        padding: 0 30px;
+        color: var(--myDGreen);
+    }
+
+    .mainMenu>a {
+        font-family: "GenJyuuGothic-H";
+        font-size: var(--pBTitle);
+
+        color: var(--myDGreen);
+    }
+
+    .mainMenu>a:hover {
+        color: var(--myYellowHover);
+        transition: 0.3s ease;
+    }
+
+    .minText>p {
+        text-align: start;
+        font-family: "GenJyuuGothic-B";
+        color: var(--myDGreen);
+        font-size: var(--pContent);
+    }
+
+    .menuprice>h4 {
+        color: var(--myWhite);
+        margin: 40px 0 0 120px;
+    }
+
+    .menuprice>h6 {
+        color: var(--myYellow);
+    }
+
+    .menuprice>p {
+        color: var(--myWhite);
+
+    }
+
+    .menuprice>h6~p {
+        color: var(--myYellow);
+
+    }
+
+
+    * {
+        box-sizing: border-box
+    }
+
+    body {
+        font-family: Verdana, sans-serif;
+        margin: 0
+    }
+
+    .mySlides {
+        display: none;
+
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 500px;
+        max-height: 600px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .slideshow-container-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .mySlides>img {
+        width: 100%;
+        border-radius: 10px;
+
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: var(--myDGreen);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        color: var(--myWhite);
+        background-color: rgba(27, 44, 26, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        letter-spacing: 2px;
+        font-size: 20px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        font-family: "GenJyuuGothic-B";
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: var(--myDGreen);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: var(--myYellowHover);
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+        .prev,
+        .next,
+        .text {
+            font-size: 11px
+        }
+    }
+}
+@media (max-width: 1100px) {
+    .menuprice>h4 {
+        margin: 280px 0 0 80px;
+        font-size: 50px;
+        transition: 0.6s ease;
+    }
+    .mainMenu>h4 {
+        font-size: var(--pMTitle);
+    }
+    .minText>p {
+        font-size: var(--pSContent);
+    }
+    .slideshow-container {
+        max-width: 400px;
+        max-height: 500px;
+        transition: 0.6s ease;}
+        
+}
+@media (max-width:820px) {
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.6s ease;
+        
+    }
+
+    .book {
+        transform: rotate(0deg);
+        transition: 0.6s ease;
+    }
+    .mainMenu>h4 {
+        font-size: var(--pMTitle);
+    }
+
+    .menuprice>h4 {
+       display: none;
+    }
+
+    .menuprice>p:nth-of-type(1) {
+        margin: 50px 0 0 0 ;
+    }
+    
+    .slideshow-container {
+        max-width: 350px;
+        max-height: 400px;}
+}

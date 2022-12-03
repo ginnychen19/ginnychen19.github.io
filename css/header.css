@@ -1,0 +1,142 @@
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+@import "main.css";
+
+@media (max-width: 4096px) {
+.header{
+    display: flex;
+    justify-content: center;
+    height: 960px;   
+}
+
+.MyGirl{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 100px 0 0 0;
+    
+}
+.bg{
+    position: relative;
+    width: 480Px;
+    height: 720px;
+    border-radius:100px 100px 10px 10px ;
+    background-color: var(--myYellow);
+    box-shadow:8px -8px 20px #fff193 inset,0 0 40px var(--myLGreen);
+}
+#MyT>h1{
+    display: none;
+}
+
+.bg>div:nth-of-type(1){
+    display:flex; 
+    flex-direction: column;
+    align-items: center;
+    padding: 210px 0 0 0 ;
+    
+}
+.dialogue{
+    display:flex; 
+    flex-direction: column;
+    align-items: flex-end;
+
+    height: fit-content;
+    width:fit-content;
+
+    color: var(--myLGreen); 
+
+    border-radius: 10px ;
+    padding: 10px 20px;
+    
+    background-color:var(--myWhite);
+}
+
+.ans{
+    display: flex;
+}
+
+.ans>button{
+    margin:0 0 0 20px ;
+
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+
+    font-family: "GenJyuuGothic-B";
+    font-size: var(--pSTitle);
+    color: var(--myLGreen);
+}
+.ans>button:hover{
+    color: var(--myYellowHover);
+}
+.ans a{
+    text-decoration: none;
+}
+#MyG{
+    position: relative;
+    height: 400px;
+    left: 20px;
+    bottom: 0;
+}
+
+.headline{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 50px;
+}
+.headline h1{
+    letter-spacing:10px;
+    color: var(--myWhite);
+    text-shadow: 0 0 10px var(--myLGreen);
+}
+
+.headline>div:nth-of-type(1){
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.headline>div:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.HBtns{
+    display: flex;
+    flex-direction: column;
+}
+.HBtns>div{
+    display: flex;
+    color: var(--myWhite);
+    margin: 20px 0 0 0;
+    
+}
+
+.HBtns img{
+    width: 60px;
+    padding: 0 20px 0 0;
+}
+.HBtns a{
+    text-decoration: none;
+}
+}
+
+@media (max-width: 940px){
+.header{
+    display: flex;
+    justify-content: center;
+    height: 960px; 
+    }
+    #MyT h1{
+        position: absolute;
+        display: block;
+        top: -60px;
+        left: 60px;
+    }
+    .headline{
+        display: none;
+    }
+
+}

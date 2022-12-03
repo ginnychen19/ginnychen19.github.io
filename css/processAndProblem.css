@@ -1,0 +1,157 @@
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+@import "main.css";
+
+/*------小於並包含 1280px 的裝置大小之下------------------------*/
+@media (max-width: 4096px) {
+    .processAndProblem{
+        display: flex;        
+        justify-content: center;
+    }
+    /*---------------------------委託流程-------------------------*/
+    .process {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 40px;
+       
+        height: 1080px;
+    }
+    
+    .process>div:first-child {
+        display: flex;
+        margin: 40px 0 0 0 ;
+    }
+    
+    .process h4 {
+        letter-spacing: 10px;
+        text-align: center;
+    
+        color: var(--myWhite);
+    }
+    
+    
+    .process01 {
+        display: flex;
+        flex-direction: column;
+    
+        color: var(--myWhite);
+    }
+    
+    .process01>div {
+        margin: 10px;
+        padding: 5px 20px;
+        border-radius: 20px;
+    
+        background-color: var(--myYellow);
+    }
+    
+    /*---------------------------常見問題-------------------------*/
+    .problem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        height: 1080px; 
+       
+    }
+    
+    .problem>div:first-child {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 0 0 0 ;
+    
+        /* background-color: blue; */
+    }
+    
+    .problem h4 {
+        letter-spacing: 10px;
+        text-align: center;
+        
+    
+        color: var(--myWhite);
+    }
+    
+    .problem01 {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+    
+        padding: 40px 40px;
+        border-radius: 40px;
+    
+        background-color: var(--myYellow);
+    }
+    
+    .problem01 h6 {
+        color: var(--myWhite);
+    }
+    
+    .problem01>div:nth-child(1) {
+        display: flex;
+        align-items: center;
+    }
+    
+    .problem01>div:nth-child(2) {
+        display: flex;
+        flex-direction: row;
+    
+        color: var(--myWhite);
+        font-family: "GenJyuuGothic-L";
+        font-size: var(--pContent);
+        text-align: justify;
+    }
+    select {
+        background-color: var(--myYellow);
+        border: none;
+    
+        color: var(--myWhite);
+        font-family: "GenJyuuGothic-B",Georgia;
+        font-size: var(--pSTitle);
+        padding: 20px 3px
+    }
+      
+}
+
+/*------小於並包含 960px 的裝置大小之下------------------------*/
+@media (max-width: 960px) {
+    .processAndProblem{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /*---------------------------委託流程(手機)-------------------------*/
+    .process01 {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+
+        color: var(--myWhite);
+    }
+    .process01>div {
+        margin: 10px;
+        padding: 5px 30px;
+        border-radius: 15px;
+
+        background-color: var(--myYellow);
+    }
+    /*---------------------------常見問題(手機)-------------------------*/
+    .problem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        height: 1080px;
+    }
+
+    .problem01 {
+        display: flex;
+        flex-direction: column;
+        border-radius: 35px;
+        width: 80vw;
+        background-color: var(--myYellow);
+    }
+
+
+
+}
+

@@ -1,0 +1,124 @@
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+@import "main.css";
+
+@media (max-width: 4096px) {
+    .contactMe {
+        clear: both;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        height: 720px;
+
+        padding: 40px 120px;
+    }
+
+    .contactMe h4 {
+        letter-spacing: 10px;
+        text-align: center;
+
+        color: var(--myWhite);
+    }
+
+    .contactMe>div:first-child {
+        display: flex;
+        flex-direction: column;
+
+        /* background-color: blue; */
+    }
+
+    .contactMe01 {
+        display: flex;
+        /* background-color: brown; */
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        /* background-color: blueviolet; */
+        padding: 10px 0 0 0;
+    }
+
+    form div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        font-family: "GenJyuuGothic-B";
+        color: var(--myWhite);
+        font-size: var(--pSTitle);
+    }
+
+    input {
+        font-family: "GenJyuuGothic-L";
+        color: var(--myGreen);
+        font-size: var(--pContent);
+        /* width: 20vw; */
+        /* display:table-cell; */
+        border-style: none;
+        border-radius: 5px;
+        background-color: var(--myWhite);
+
+        margin: 0 0 20px 0;
+    }
+
+    input[type="submit"] {
+        border: none;
+        margin: 20px 0 0 0;
+        font-family: "GenJyuuGothic-B";
+        color: var(--myGreen);
+        font-size: var(--pSTitle);
+        background-color: var(--myYellow);
+
+    }
+
+    textarea {
+        font-family: "GenJyuuGothic-L";
+        color: var(--myGreen);
+        font-size: var(--pContent);
+        /* width: 20vw; */
+        /* display:table-cell; */
+
+        border-radius: 5px;
+        background-color: var(--myWhite);
+
+    }
+
+    .contactMe01 h6 {
+        color: var(--myWhite);
+        padding: 0 0 0 30px;
+
+        letter-spacing: 5px;
+        /* background-color: aqua; */
+    }
+
+    .contactMe p {
+        /*文字左右對齊*/
+        color: var(--myWhite);
+        text-align: justify;
+
+        padding: 0 0 0 30px;
+        /*background-color: aqua;*/
+    }
+}
+
+@media (max-width: 768px) {
+    .contactMe01 {
+        display: flex;
+        flex-direction:column;
+        /* background-color: brown; */
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width:80vw;
+        /* background-color: blueviolet; */
+        padding: 10px 0 0 0;
+    }
+
+    .contactMe01>div:nth-of-type(2){
+        display: none;
+    }
+}
