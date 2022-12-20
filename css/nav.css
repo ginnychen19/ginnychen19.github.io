@@ -25,10 +25,13 @@
 
 .navbar>img {
     margin: 0 0 20px 0;
-    /* background-color: rgb(246, 255, 0); */
 }
 
 #navBlockText {
+    position: fixed;
+
+    top: 140px;
+
     display: flex;
     flex-direction: column;
 }
@@ -55,15 +58,5 @@
 
 #navBlockText>button:hover {
     color: var(--myWhite);
-    transition: 0.3s ease;
-}
-
-#navBlockText>a.active {
-    color: red;
-    transition: 0.3s ease;
-}
-
-#navBlockText>a:not(.active ){
-    color: var(--myYellow);
     transition: 0.3s ease;
 }
