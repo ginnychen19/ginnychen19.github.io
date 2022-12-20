@@ -1,0 +1,48 @@
+#LoadingAni {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--myLGreen);
+}
+
+canvas#canvasLoadAni {
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    /* background-color: aqua;  */
+
+
+}
+#LoadingAni>div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+
+    justify-content: center;
+    align-items: center;
+}
+#LoadingAni h4 {
+    color: var(--myDGreen);
+}
+
+#LoadingAni img {
+    max-width: 600px;
+}
+
+#LoadingAni img.img01 {
+    width: 1200px;
+}
+

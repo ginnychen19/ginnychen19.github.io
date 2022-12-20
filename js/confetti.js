@@ -2,9 +2,6 @@
 const Wheight = window.innerHeight;
 alert(Wheight) 
 */
-
-
-var Weed = "img/svg/Weed_dark.svg";
 var canvas1Settings = {
     target: 'canvas1',
     max: 150,
