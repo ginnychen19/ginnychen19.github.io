@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
   let lastPos = 0;
   const navbar = document.querySelector('.navbar');
   const header = document.querySelector('#header');
-  
+
   //--------1. 判斷是否在header區---------------------------------
   const isHeader = (entries, observer) => {
     entries.forEach(entry => {
@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
   }
   let observer = new IntersectionObserver(isHeader);
   observer.observe(header);
-  
+
   //--------2. 消失----------------------------------------------
   const navBlockText = document.querySelector('#navBlockText');
 
@@ -62,17 +62,17 @@ window.addEventListener('load', () => {
     imgBT.src = "img/svg/Weed_BackToTop.svg";
   });
 
-  
+
   imgBT.addEventListener('click', function () {
     //如果現在是看得到文字的話，點一下可以來
     //如果是看不到文字的話，點一下可以打開
 
     //要小心，這裡需要確實轉換成int才能做比較！不然他會以為是字符串
     //navBlockText.style.right 的值是字符串，而不是數字
-    if(parseInt(navBlockText.style.right, 10) > 0){
+    if (parseInt(navBlockText.style.right, 10) > 0) {
       navBlockText.style.right = "-100px"; //讓nav bar消失
       navBlockText.style.transition = "1.0s\nease";
-    }else{
+    } else {
       navBlockText.style.right = "17px"; //讓nav bar出現
       navBlockText.style.transition = "1.0s\nease";
     }

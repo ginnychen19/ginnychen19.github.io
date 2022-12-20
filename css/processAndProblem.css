@@ -100,7 +100,7 @@
         font-size: var(--pContent);
         text-align: justify;
     }
-    select {
+    select#sltQ {
         background-color: var(--myYellow);
         border: none;
     

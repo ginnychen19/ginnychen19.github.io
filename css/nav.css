@@ -56,7 +56,8 @@
     text-decoration: none;
 }
 
+/*哇哇這現在沒用了*/
 #navBlockText>button:hover {
-    color: var(--myWhite);
+    text-decoration: solid;
     transition: 0.3s ease;
 }
