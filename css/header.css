@@ -37,7 +37,6 @@
 .dialogue{
     display:flex; 
     flex-direction: column;
-    align-items: flex-end;
 
     height: fit-content;
     width:fit-content;
@@ -52,9 +51,11 @@
 
 .ans{
     display: flex;
+    
+    
 }
 
-.ans>button{
+.ans button{
     margin:0 0 0 20px ;
 
     border: none;
@@ -65,7 +66,7 @@
     font-size: var(--pSTitle);
     color: var(--myLGreen);
 }
-.ans>button:hover{
+.ans button:hover{
     color: var(--myYellowHover);
 }
 .ans a{
@@ -119,6 +120,7 @@
 }
 .HBtns a{
     text-decoration: none;
+    color: var(--myYellow);
 }
 }
 

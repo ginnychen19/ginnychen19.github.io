@@ -26,14 +26,18 @@
                     text-shadow: 0 0 10px var(--myLGreen);">
                         <h1 class="animate__animated animate__bounce animate__infinite">大麻教繪</h1>
                     </div>
-                    <div class="dialogue">
+                    <div class="dialogue" style="display:none">
                         <h6 id="dialogueText">...</h6>
                         <div class="ans" style="display:none">
-                            <button><a href="#processAndProblem">委託</a></button>
-                            <button><a href="https://www.facebook.com/107051064elizabeth/">主頁</a></button>
+                            <a id="ans01" href=" ">
+                                <button id="ans01"></button>
+                            </a>
+                            <a id = "ans02" href=" ">
+                                <button id = "ans02"></button>
+                            </a>
                         </div>
                     </div>
-                    <img id="MyG" onclick="typeWriter()" src="./img/svg/MyG_ANI02.svg">
+                    <img id="MyG" src="./img/svg/MyG_ANI02.svg">
                 </div>
             </div>
         </div>
@@ -315,7 +319,7 @@
 
     <!--使用電腦的時候-->
     <div id="processAndProblem-C" class="processAndProblem">
-        <div id="process" class="process animate__animated animate__fadeInUp">
+        <div id="process" class="process">
             <div style="flex: 1">
                 <h4>委託流程</h4>
             </div>
@@ -345,7 +349,7 @@
             </div>
         </div>
         <!--常見問題頁-->
-        <div id="problem" class="problem animate__animated animate__fadeInUp">
+        <div id="problem" class="problem">
             <div style="flex: 1">
                 <h4>常見問題</h4>
             </div>
@@ -468,7 +472,8 @@
 
 
     <!---------------程式---------------------------------------------------------------->
-    <script src="./js/talk.js"></script>
+    <script src="./js/talk.js">
+    </script>
     <script src="./js/scrollNav.js"></script>
     <script src="./js/linkSlidenIn.js"></script>
     <script type="text/javascript" src="./confetti-js-master/dist/index.min.js"></script>

@@ -1,3 +1,27 @@
+//判斷是否到process和problem區，到了再執行進入動畫
+//加入 class="animate__animated animate__fadeInUp"
+window.addEventListener('load', () => {
+    const process = document.querySelector('#process');
+const problem = document.querySelector('#problem');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        const element = entry.target;
+
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                element.style.display = "flex";
+                element.classList.add('animate__animated', 'animate__fadeInUp');
+            }, 200);
+        } else {
+            
+        }
+    });
+});
+
+observer.observe(process);
+observer.observe(problem);
+
 $(function () {
     //全部選擇隱藏
     $('div[id^="Q_"]').hide();
@@ -10,3 +34,6 @@ $(function () {
         $(sltValue).show();
     });
 });
+
+});
+    
