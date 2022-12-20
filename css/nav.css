@@ -2,6 +2,7 @@
 @import "main.css";
 
 .navbar {
+    display: block;
     position: fixed;
     right: 0px;
     top: 0px;
@@ -14,8 +15,10 @@
     justify-content: center;
     /* 垂直置中 */
     align-items: center;
+    opacity: 100%;
 
     padding: 40px 20px;
+    transition: 1.0 ease;
 
     /*  background-color: aqua; */
 }
@@ -35,20 +38,32 @@
     text-align: center;
     text-decoration: none;
     font-family: "GenJyuuGothic-B";
+
     color: var(--myYellow);
+
     font-size: var(--pContent);
 
-    background-color: #0f2d2878;
-    
+    background-color: transparent;
+
     border-style: none;
     margin: 3px;
 }
 
-#navBlockText a{
-text-decoration: none;
+#navBlockText a {
+    text-decoration: none;
 }
 
 #navBlockText>button:hover {
     color: var(--myWhite);
+    transition: 0.3s ease;
+}
+
+#navBlockText>a.active {
+    color: red;
+    transition: 0.3s ease;
+}
+
+#navBlockText>a:not(.active ){
+    color: var(--myYellow);
     transition: 0.3s ease;
 }

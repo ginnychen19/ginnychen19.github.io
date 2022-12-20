@@ -7,12 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/test.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>Document</title>
-</head>
+    <style>
+        #nav {
+            text-align: center;
+            background: #0aa0f5;
+            height: 80px;
+            position: fixed;
+            /*绝对定位，可用"left", "top", "right"，"bottom" 控制*/
+            width: 100%;
+            top: 0px;
+        }
+
+        .content {
+            height: 1000px;
+            background: #1eae9e;
+        }
+
+        .backToTop {
+
+            position: fixed;
+            bottom: 55px;
+            right: 0;
+        }
+
+        .backToTop:hover {
+
+            cursor: pointer;
+        }
+    </style>
+
 
 <body>
+    <div id="nav">导航栏</div>
+
+    <div class="content">
+        模拟内容
+    </div>
+    <div class="backToTop">
+        <img src="./img/svg/MyG.svg" />
+    </div>
+
     <div id="portfolio" class="portfolio">
         <div class="book">
             <div class="pages">
@@ -98,6 +136,50 @@
         </div>
     </div>
 
+
+
+
+    <script type="text/javascript">
+        $(function() {
+            // 当页面向下滑动 600px 出现"返回顶部" 按钮
+            $(window).scroll(function() {
+                if($(window).scrollTop() > 600) {
+                    $('.backToTop').css('right', '0px');
+                    $('.backToTop').css('transition', '1.0s');
+                } else {
+                    $('.backToTop').css('right', '-180px');
+                }
+            });
+             // 点击按钮，返回页面顶部
+            $(".backToTop").on("click", function() {
+        
+                $("html").animate({
+        
+                    scrollTop: 0
+                }, 1000)
+            })
+        });
+    </script>
+    <!--scroll nav程式-->
+    <script>
+        //JS
+        let lastPos = 0
+        const nav = document.getElementById('nav');
+
+        // 監聽scroll事件
+        document.addEventListener('scroll', function () {
+            let currentPos = window.scrollY;
+            //   往下滑
+            if (currentPos > lastPos) {
+                nav.style.top = "-80px"; //讓nav bar消失
+                nav.style.transition = "0.6s\nease";
+            } else {
+                nav.style.top = "0px"; //讓nav bar出現
+            }
+            lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
+        });
+
+    </script>
     <!--輪播pic01程式-->
     <script>
         let Pic01Index = 1;
@@ -170,7 +252,7 @@
         showPics(picsIndex);
         let priceIndex = 1;
         showprices(priceIndex);
-        
+
         function plusMenu(n) {
             showMenus(MenuIndex += n);
             showPics(picsIndex += n);
@@ -180,7 +262,7 @@
         function showMenus(n) {
             let j;
             let titles = document.getElementsByClassName("menutitle");
-    
+
             if (n > titles.length) { MenuIndex = 1 }
             if (n < 1) { MenuIndex = titles.length }
 

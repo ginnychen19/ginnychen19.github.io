@@ -38,6 +38,13 @@
     --pSContent: 14px;
 }
 
+body{
+    display:flex;
+    flex-direction: column;
+    background: var(--myDGreen);
+}
+
+
 h1{
     font-family: "GenJyuuGothic-H";
     font-size: var(--pLabel);

@@ -5,6 +5,7 @@
     .portfolio {
         display: flex;
         justify-content: center;
+        margin: 140px 0 0 0;
     }
 
     .book {
@@ -12,7 +13,7 @@
         padding: 20px;
         border-radius: 10px;
         transform: rotate(-3deg);
-        margin: 0 40px 0 0;
+        margin: 0px 40px 0 0;
     }
 
     .pages {

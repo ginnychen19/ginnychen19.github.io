@@ -9,19 +9,19 @@
     <link href="./img/marijuana.png" rel="icon" type="image/png">
     <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="./css/test.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="//unpkg.com/jquery"></script>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 
 <body style="margin:0">
     <!--封面動畫頁-->
-    <header class="header">
+    <header class="header" id="header">
         <div class="MyGirl">
             <div class="bg">
                 <div>
-                    <div id="MyT" 
-                    style="letter-spacing:10px ;
+                    <div id="MyT" style="letter-spacing:10px ;
                     color: var(--myWhite);
                     text-shadow: 0 0 10px var(--myLGreen);">
                         <h1 class="animate__animated animate__bounce animate__infinite">大麻教繪</h1>
@@ -59,8 +59,8 @@
     </header>
 
     <!--nav快速導覽列-->
-    <nav class="navbar">
-        <img src="img/svg/Weed_BackToTop.svg" alt="BackToTop" h>
+    <nav class="navbar" id="navbar">
+        <img src="img/svg/Weed_BackToTop.svg" alt="BackToTop" id="BackToTop">
         <div id="navBlockText">
             <button><a href="#portfolio">作品展示</a></button>
             <button><a href="#process">委託流程</a></button>
@@ -351,7 +351,7 @@
                 <div>
                     <h6>Q.</h6>
                     <select id="sltQ" name="ProblemQ">
-                        <option value="#Q_1">請選擇想知道的問題！</option>
+                        <option value="#Q_0">請選擇想知道的問題！</option>
                         <option value="#Q_1">付款方式</option>
                         <option value="#Q_2">草稿階段相關</option>
                         <option value="#Q_3">利用範圍與注意事頂</option>
@@ -448,6 +448,7 @@
                 </p>
             </div>
         </div>
+
     </div>
     <!--聯絡資訊、隱私權政策 (Private Policy)
         社群連結 icon 按鈕圖示 (如Facebook、Twitter、IG等)
@@ -463,303 +464,15 @@
     <canvas id="canvas1"></canvas>
 
 
-
-
-    <!--說話程式-->
-    <script>
-        var i = 0;
-        var txt = '歡迎呀，想知道什麼資訊呢?';
-        var speed = 100;
-
-
-        function typeWriter() {
-            if (i < txt.length) {
-                document.getElementById("dialogueText").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-            document.getElementById("dialogue").style.display = "block";
-        }
-    </script>
-
-    <!--連結滑入程式-->
-    <script>
-        function onhoverfb(x) {
-            document.getElementsByClassName("fb").src = "./img/svg/facebook_D.svg";
-            document.getElementById("fb").innerHTML = "伊莉莎白";
-        }
-        function normalfb(x) {
-            document.getElementsByClassName("fb").src = "./img/svg/facebook_H.svg";
-            document.getElementById("fb").innerHTML = "";
-        }
-        function onhoverins(x) {
-            document.getElementsByClassName("ins").src = "./img/svg/instagram_D.svg";
-            document.getElementById("ins").innerHTML = "@ginnychen19";
-        }
-        function normalins(x) {
-            document.getElementsByClassName("ins").src = "./img/svg/instagram_H.svg";
-            document.getElementById("ins").innerHTML = "";
-        }
-        function onhoverPixiv(x) {
-            document.getElementsByClassName("Pixiv").src = "./img/svg/Pixiv_D.svg";
-            document.getElementById("Pixiv").innerHTML = "大麻仙子";
-        }
-        function normalPixiv(x) {
-            document.getElementsByClassName("Pixiv").src = "./img/svg/Pixiv_H.svg";
-            document.getElementById("Pixiv").innerHTML = "";
-        }
-
-
-    </script>
-
-
-    <!--飄紙程式-->
+    <!---------------程式---------------------------------------------------------------->
+    <script src="./js/talk.js"></script>
+    <script src="./js/aaa.js"></script>
+    <!-- <script src="./js/scrollNav.js"></script> -->
+    <script src="./js/linkSlidenIn.js"></script>
     <script type="text/javascript" src="./confetti-js-master/dist/index.min.js"></script>
-    <script type="text/javascript">
-        var canvas1Settings = {
-            target: 'canvas1',
-            max: 500,
-            size: 1,
-            props: ['square',
-                'triangle',
-                { 'type': 'svg', 'src': 'img/svg/Weed_dark.svg' },
-            ],
-            colors: [[233, 224, 217], [254, 162, 32], [110, 149, 76]],
-            clock: 3,
-            width: "1900",
-            height: "3500",
-            start_from_edge: false,
-            respawn: true
-        };
-        var canvas1 = new ConfettiGenerator(canvas1Settings);
-        canvas1.render();
-
-        var canvas2Settings = {
-            target: 'canvas2',
-            max: 300,
-            size: 0.6,
-            props: ['square',
-                'triangle',
-                { 'type': 'svg', 'src': 'img/svg/Weed_dark.svg' },
-            ],
-            colors: [[233, 224, 217], [254, 162, 32], [110, 149, 76]],
-            clock: 3
-        };
-        var canvas2 = new ConfettiGenerator(canvas2Settings);
-        canvas2.render();
-
-        var canvas3Settings = {
-            target: 'canvas3',
-            max: 300,
-            size: 0.6,
-            props: ['square',
-                'triangle',
-                { 'type': 'svg', 'src': 'img/svg/Weed_dark.svg' },
-            ],
-            colors: [[233, 224, 217], [254, 162, 32], [110, 149, 76]],
-            clock: 3
-        };
-        var canvas3 = new ConfettiGenerator(canvas3Settings);
-        canvas3.render();
-
-    </script>
-
-    <!--portfolio頁---------------------------------------------------------->
-    <!--輪播pic01程式-->
-    <script>
-        let Pic01Index = 1;
-        showPic01(Pic01Index);
-        //編號預設等於1 ，將1帶入並執行showSlides
-
-        function plusSlides01(n) {
-            showPic01(Pic01Index += n);
-        }
-        //若呼叫plusSlides()，執行 showSlides 並執行n+1
-
-        function currentSlide01(n) {
-            showPic01(Pic01Index = n);
-        }
-        //若呼叫currentSlide01()，執行showPic01 並Pic01Index會等於當前數值
-
-        function showPic01(n) {
-            let i;
-            let Pic01s = document.getElementsByClassName("myPic01");
-            //slides 是抓到全部的div
-
-            //n，表示當前數字(this)
-            //如果當前累加數字超過原數量，數字變回1
-            if (n > Pic01s.length) { Pic01Index = 1 }
-            //如果當前累加數字<1，數字變回總長
-            if (n < 1) { Pic01Index = Pic01s.length }
-
-            //for(給初始值；給做的條件；遞增的方式 )
-            //全部變關閉狀態
-            for (i = 0; i < Pic01s.length; i++) {
-                Pic01s[i].style.display = "none";
-            }
-            //slides[slideIndex - 1]是當前這個，打開
-            Pic01s[Pic01Index - 1].style.display = "block";
-        }
-    </script>
-    <!--輪播pic02程式-->
-    <script>
-        let Pic02Index = 1;
-        showPic02(Pic02Index);
-        function plusSlides02(n) {
-            showPic02(Pic02Index += n);
-        }
-        function currentSlide02(n) {
-            showPic02(Pic02Index = n);
-        }
-        function showPic02(n) {
-            let i;
-            let Pic02s = document.getElementsByClassName("myPic02");
-            if (n > Pic02s.length) { Pic02Index = 1 }
-            if (n < 1) { Pic02Index = Pic02s.length }
-            for (i = 0; i < Pic02s.length; i++) {
-                Pic02s[i].style.display = "none";
-            }
-            Pic02s[Pic02Index - 1].style.display = "block";
-        }
-    </script>
-    <!--輪播pic03程式-->
-    <script>
-        let Pic03Index = 1;
-        showPic03(Pic03Index);
-        function plusSlides03(n) {
-            showPic03(Pic03Index += n);
-        }
-        function currentSlide03(n) {
-            showPic03(Pic03Index = n);
-        }
-        function showPic03(n) {
-            let i;
-            let Pic03s = document.getElementsByClassName("myPic03");
-            if (n > Pic03s.length) { Pic03Index = 1 }
-            if (n < 1) { Pic03Index = Pic03s.length }
-            for (i = 0; i < Pic03s.length; i++) {
-                Pic03s[i].style.display = "none";
-            }
-            Pic03s[Pic03Index - 1].style.display = "block";
-        }
-    </script>
-    <!--輪播pic04程式-->
-    <script>
-        let Pic04Index = 1;
-        showPic04(Pic04Index);
-        function plusSlides04(n) {
-            showPic04(Pic04Index += n);
-        }
-        function currentSlide04(n) {
-            showPic04(Pic04Index = n);
-        }
-        function showPic04(n) {
-            let i;
-            let Pic04s = document.getElementsByClassName("myPic04");
-            if (n > Pic04s.length) { Pic04Index = 1 }
-            if (n < 1) { Pic04Index = Pic04s.length }
-            for (i = 0; i < Pic04s.length; i++) {
-                Pic04s[i].style.display = "none";
-            }
-            Pic04s[Pic04Index - 1].style.display = "block";
-        }
-    </script>
-    <!--輪播pic05程式-->
-    <script>
-        let Pic05Index = 1;
-        showPic05(Pic05Index);
-        function plusSlides05(n) {
-            showPic05(Pic05Index += n);
-        }
-        function currentSlide05(n) {
-            showPic05(Pic05Index = n);
-        }
-        function showPic05(n) {
-            let i;
-            let Pic05s = document.getElementsByClassName("myPic05");
-            if (n > Pic05s.length) { Pic05Index = 1 }
-            if (n < 1) { Pic05Index = Pic05s.length }
-            for (i = 0; i < Pic05s.length; i++) {
-                Pic05s[i].style.display = "none";
-            }
-            Pic05s[Pic05Index - 1].style.display = "block";
-        }
-    </script>
-    <!--圖片點擊放大-->
-    <script>
-        function onClick(element) {
-            document.getElementById("img01").src = element.src;
-            document.getElementById("modal01").style.display = "block";
-        }
-    </script>
-    <!--換Menudiv程式-->
-    <script>
-        let MenuIndex = 1;
-        showMenus(MenuIndex);
-        let picsIndex = 1;
-        showPics(picsIndex);
-        let priceIndex = 1;
-        showprices(priceIndex);
-
-        function plusMenu(n) {
-            showMenus(MenuIndex += n);
-            showPics(picsIndex += n);
-            showprices(priceIndex += n);
-        }
-        function showMenus(n) {
-            let j;
-            let titles = document.getElementsByClassName("menutitle");
-
-            if (n > titles.length) { MenuIndex = 1 }
-            if (n < 1) { MenuIndex = titles.length }
-
-            for (j = 0; j < titles.length; j++) {
-                titles[j].style.display = "none";
-            }
-            titles[MenuIndex - 1].style.display = "block";
-        }
-        function showPics(n) {
-            let k;
-            let pics = document.getElementsByClassName("menupic");
-
-            if (n > pics.length) { picsIndex = 1 }
-            if (n < 1) { picsIndex = pics.length }
-
-            for (k = 0; k < pics.length; k++) {
-                pics[k].style.display = "none";
-            }
-            pics[picsIndex - 1].style.display = "block";
-        }
-        function showprices(n) {
-            let k;
-            let prices = document.getElementsByClassName("menuprice");
-
-            if (n > prices.length) { priceIndex = 1 }
-            if (n < 1) { priceIndex = prices.length }
-            for (k = 0; k < prices.length; k++) {
-                prices[k].style.display = "none";
-            }
-            prices[priceIndex - 1].style.display = "block";
-        }
-    </script>
-
-    <!--processAndProblem頁---------------------------------------------------------->
-    <!--select換區程式-->
-    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    <script>
-        $(function () {
-            //全部選擇隱藏
-            $('div[id^="Q_"]').hide();
-            $('#sltQ').change(function () {
-                let sltValue = $(this).val();
-                console.log(sltValue);
-
-                $('div[id^="Q_"]').hide();
-                //指定選擇顯示
-                $(sltValue).show();
-            });
-        });
-    </script>
+    <script src="./js/confetti.js"></script>
+    <script src="./js/portfolio.js"></script>
+    <script src="./js/processAndProblem.js"></script>
 
 </body>
 
