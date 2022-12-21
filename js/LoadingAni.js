@@ -7,7 +7,10 @@ console.log(`Page load progress: ${loadProgress * 100}%`);
 
 
 $(document).ready(function(){
-  $("#LoadingAni").fadeOut(500);
+  setTimeout(() => {
+    $("#LoadingAni").fadeOut(500);
+  },3000);
+  
 });
 
 
