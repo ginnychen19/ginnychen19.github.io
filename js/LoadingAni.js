@@ -8,7 +8,7 @@ import '../confetti-js-master/src/confetti.js';
 
 var canvasLoadAniSettings = {
   target: 'canvasLoadAni',
-  max: 30,
+  max: 50,
   size: 3,
   props: [
     { 'type': 'svg', 'src': 'img/svg/Weed.svg' },
@@ -18,7 +18,8 @@ var canvasLoadAniSettings = {
   width: "1900",
   height: "1080",
   rotate: true,
-  respawn: true,
+  animate:false,
+  
 };
 
 var canvas1Settings = {

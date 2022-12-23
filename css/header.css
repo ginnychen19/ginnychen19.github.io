@@ -20,7 +20,14 @@
     width: 480Px;
     height: 720px;
     border-radius:100px 100px 10px 10px ;
+
     background-color: var(--myYellow);
+    background-image: url(../img/svg/myGbg.svg);
+    background-repeat:no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+
+
     box-shadow:8px -8px 20px #fff193 inset,0 0 40px var(--myLGreen);
 }
 #MyT>h1{
@@ -38,6 +45,8 @@
     display:flex; 
     flex-direction: column;
     position: absolute;
+    top: 200px;
+
 
     height: fit-content;
     width:fit-content;
@@ -75,9 +84,9 @@
 }
 #MyG{
     position: relative;
-    height: 400px;
-    left: 20px;
-    bottom:  -125px;
+    height: 450px;
+    left: 2px;
+    bottom:  -83px;
 }
 
 .headline{

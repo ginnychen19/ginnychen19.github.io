@@ -10,13 +10,12 @@ var firstClick = true;
 
 imgMyG.addEventListener('click', function () {
     if (!firstClick) return; // 如果不是第一次按擊，則退出函數
-
     firstClick = false;
+
     var i = 0;
     var txt = '歡迎呀，想知道什麼資訊呢?';
     var speed = 100;
 
-    document.querySelector(".dialogue").style.display = "block";
 
     function typeWriter() {
         if (i < txt.length) {
@@ -71,7 +70,12 @@ imgMyG.addEventListener('click', function () {
 
         }
     }
-    typeWriter();
+
+    setTimeout(() => {
+        document.querySelector("#MyG").src = "./img/svg/MyG_TalkLU_ANI02.svg";
+        document.querySelector(".dialogue").style.display = "block";
+        typeWriter();
+    },500);
 });
 
 
