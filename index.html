@@ -19,17 +19,23 @@
 <body style="margin:0">
     <!--載入動畫-->
     <div id="LoadingAni">
-        <div>
-            <img class="img01" src="./img/svg/loadingTextAni02.svg">
+        <div style="position: absolute;">
+            <div class = "column01">
+                <img class="leaf TL" src="./img/svg/leaf_TL.svg">
+                <img class="leaf TR" src="./img/svg/leaf_TR.svg" >
+            </div>
+            <div class = "column02">
+                <img class="img00" src="./img/svg/loadingTextAni03.svg">
+                <img class="img01" src="./img/svg/MyG_ANI02.svg">
+                <img class="img02" src="./img/svg/loadingTextAni02.svg">
+            </div>
+            <div class = "column03">
+                <img class="leaf BL" src="./img/svg/leaf_BL.svg" >
+                <img class="leaf BR" src="./img/svg/leaf_BR.svg" >
+            </div>
             <!-- <h4>大麻教繪</h4> -->
-            <img src="./img/svg/MyG_ANI02.svg">
         </div>
-        <canvas id="canvasLoadAni"></canvas>
     </div>
-
-
-
-
     <!--封面動畫頁-->
     <header class="header" id="header">
         <div class="MyGirl">
@@ -41,7 +47,7 @@
                         <h1 class="animate__animated animate__bounce animate__infinite">大麻教繪</h1>
                     </div>
                     <div class="dialogue" style="display:none">
-                        <h6 id="dialogueText">...</h6>
+                        <h6 id="dialogueText"></h6>
                         <div class="ans" style="display:none">
                             <a id="ans01" href=" ">
                                 <button id="ans01"></button>
@@ -75,10 +81,9 @@
             </div>
         </div>
     </header>
-
     <!--nav快速導覽列-->
     <nav class="navbar" id="navbar">
-        <img src="img/svg/Weed_BackToTop.svg" alt="BackToTop" id="BackToTop">
+        <div alt="BackToTop" id="BackToTop"></div>
         <div id="navBlockText">
             <button><a href="#portfolio">作品展示</a></button>
             <button><a href="#process">委託流程</a></button>

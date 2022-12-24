@@ -45,23 +45,15 @@ window.addEventListener('load', () => {
       navBlockText.style.right = "-100px"; //讓nav bar消失
       navBlockText.style.transition = "1.0s\nease";
     } else {
-      navBlockText.style.right = "17px"; //讓nav bar出現
+      navBlockText.style.right = "22px"; //讓nav bar出現
       navBlockText.style.transition = "1.0s\nease";
     }
     lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
   });
 
 
-  //--------3. 點擊圖片時，收起或打開文字區，還有hover時換個顏色--------------------------
+  //--------3. 點擊圖片時，收起或打開文字區--------------------------
   const imgBT = document.querySelector('#BackToTop');
-
-  imgBT.addEventListener('mouseover', function () {
-    imgBT.src = "img/svg/Weed_BackToTop_Hover.svg";
-  });
-  imgBT.addEventListener('mouseout', function () {
-    imgBT.src = "img/svg/Weed_BackToTop.svg";
-  });
-
 
   imgBT.addEventListener('click', function () {
     //如果現在是看得到文字的話，點一下可以來
@@ -73,7 +65,7 @@ window.addEventListener('load', () => {
       navBlockText.style.right = "-100px"; //讓nav bar消失
       navBlockText.style.transition = "1.0s\nease";
     } else {
-      navBlockText.style.right = "17px"; //讓nav bar出現
+      navBlockText.style.right = "22px"; //讓nav bar出現
       navBlockText.style.transition = "1.0s\nease";
     }
   });
@@ -88,7 +80,16 @@ window.addEventListener('load', () => {
       } else {
         a.style.color = "var(--myYellow)";
       }
+      a.addEventListener('mouseover', function () {
+        a.style.color = "var(--myLGreen)";
+      });
+      a.addEventListener('mouseout', function () {
+        if (entry.isIntersecting) {a.style.color = "var(--myWhite)";} else {a.style.color = "var(--myYellow)"}
+      });
     });
+  }, {
+    //當目標元素的可見度達到 40% 時才觸發 callback 函式。
+    threshold: [0.4]
   });
   // 以此類推，監測其他 div
   const portfolio = document.querySelector('#portfolio');

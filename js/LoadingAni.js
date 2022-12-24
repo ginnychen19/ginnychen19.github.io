@@ -6,22 +6,6 @@ console.log(`Page load progress: ${loadProgress * 100}%`);
 */
 import '../confetti-js-master/src/confetti.js';
 
-var canvasLoadAniSettings = {
-  target: 'canvasLoadAni',
-  max: 50,
-  size: 3,
-  props: [
-    { 'type': 'svg', 'src': 'img/svg/Weed.svg' },
-    { 'type': 'svg', 'src': 'img/svg/Weed02.svg' },
-  ],
-  clock: 8,
-  width: "1900",
-  height: "1080",
-  rotate: true,
-  animate:false,
-  
-};
-
 var canvas1Settings = {
   target: 'canvas1',
   max: 150,
@@ -38,16 +22,12 @@ var canvas1Settings = {
   respawn: true
 };
 
-
-var canvasLoadAni = new ConfettiGenerator(canvasLoadAniSettings);
 var canvas1 = new ConfettiGenerator(canvas1Settings);
 
-canvasLoadAni.render();
 
 $(document).ready(function () {
   setTimeout(() => {
-    $("#LoadingAni").slideUp(1000);
-    setTimeout(() => {canvasLoadAni.clear();}, 400);
+    $("#LoadingAni").fadeOut(500);
     canvas1.render();  
   }, 5000);  
 });

@@ -9,7 +9,7 @@
 
     display: flex;
     flex-direction: column;
-    z-index: 0;
+    z-index: 1;
 
     /* 水平置中 */
     justify-content: center;
@@ -20,17 +20,32 @@
     padding: 40px 20px;
     transition: 1.0 ease;
 
-    /*  background-color: aqua; */
+    /*background-color: rgb(48, 119, 119); */
 }
 
-.navbar>img {
+.navbar>div#BackToTop {
     margin: 0 0 20px 0;
+    width: 100px;
+    height:100px;
+    background-color: var(--myWhite);
+    background-image: url(../img/svg/Weed_BackToTop.svg);
+    background-size: contain;
+    box-shadow: 0 8px 10px #000000;
+    transition: 0.3s ease;
+    border-radius: 50%;
+}
+.navbar>div#BackToTop:hover {
+    background-image: url(../img/svg/Weed_BackToTop_Hover.svg);
+    transition: 0.3s ease;
+    box-shadow: 0 0 40px var(--myWhite);
+    cursor: pointer;
+
 }
 
 #navBlockText {
     position: fixed;
 
-    top: 140px;
+    top: 150px;
 
     display: flex;
     flex-direction: column;
