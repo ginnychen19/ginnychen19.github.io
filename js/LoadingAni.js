@@ -50,13 +50,32 @@ lazyLoadImages(); */
 //</img>這樣，當圖片需要顯示時，JavaScript 代碼就會觸發 IntersectionObserver 並加載圖片。
 
 
+/* 取得圖片的載入進度 */
+function Loadedprogress() {
+  $(document).imagesLoaded()
+  .progress(function (instance, image) {
+    // 載入進度百分比
+    var percentage = Math.round((instance.progressedCount / instance.images.length) * 100);
+    //console.log(percentage + "%");
+    var progresscolor = document.querySelector('.progresscolor');
+    var progressimg = document.querySelector('#progress>img');
+    var adjustedPercentage = 100-((percentage - 5) * (95 - 5) / (100 - 5) + 5);
+    progresscolor.style.width = percentage + '%';
+    progressimg.style.right = adjustedPercentage + '%';
+  })
+}
+
+
+
+
 $(document).ready(function () {
   // 使用 $.fn.imagesLoaded 方法確保所有圖片載入完成
   $(document).imagesLoaded(function () {
+    Loadedprogress();
     setTimeout(() => {
       $("#LoadingAni").fadeOut(500);
       canvas1.render();
-    }, 500);
+    }, 20000);
   });
 });
 

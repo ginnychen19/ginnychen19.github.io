@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" style="margin: auto; background: none; 
 display: block; shape-rendering: auto;" 
-width="280" height="80" preserveAspectRatio="xMidYMid">
+width="250" height="60" preserveAspectRatio="xMidYMid">
 <style type="text/css">
   text {
     text-anchor: middle; font-size: 68px; opacity: 0;
   }
 </style>
-<g style="transform-origin: 140px -400px; transform: scale(0.85);">
+<g style="transform-origin: 0px -460px; transform: scale(0.85);">
 
 <g transform="translate(140,125)">
 
