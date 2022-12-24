@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script type="text/javascript" src="./confetti-js-master/dist/index.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="//unpkg.com/jquery"></script>
     <link rel="stylesheet" href="./css/main.css">
 </head>
-
 
 <body style="margin:0">
     <!--載入動畫-->
@@ -66,17 +66,17 @@
                 <h1 class="animate__animated animate__bounce animate__infinite">大麻教繪</h1>
             </div>
             <div class="HBtns">
-                <div onmouseover="onhoverfb(this)" onmouseout="normalfb(this)">
-                    <img class="fb" src="./img/svg/facebook_H.svg" alt="fb_H">
-                    <h6><a href="https://www.facebook.com/107051064elizabeth/" id="fb" target="_blank"></a></h6>
+                <div class="fb"  onmouseover="onhoverfb(this)" onmouseout="normalfb(this)">
+                    <img src="./img/svg/facebook_H.svg" alt="fb_H">
+                    <h6><a href="https://www.facebook.com/107051064elizabeth/"  target="_blank">伊莉莎白</a></h6>
                 </div>
-                <div onmouseover="onhoverins(this)" onmouseout="normalins(this)">
-                    <img class="ins" src="./img/svg/instagram_H.svg" alt="ins_H">
-                    <h6><a href="https://www.instagram.com/ginnychen19/" id="ins" target="_blank"></a></h6>
+                <div class="ins" onmouseover="onhoverins(this)" onmouseout="normalins(this)">
+                    <img src="./img/svg/instagram_H.svg" alt="ins_H">
+                    <h6><a href="https://www.instagram.com/ginnychen19/"  target="_blank">@ginnychen19</a></h6>
                 </div>
-                <div onmouseover="onhoverPixiv(this)" onmouseout="normalPixiv(this)">
-                    <img class="Pixiv" src="./img/svg/Pixiv_H.svg" alt="/Pixiv_H">
-                    <h6><a href="https://www.pixiv.net/users/8585053" id="Pixiv" target="_blank"></a></h6>
+                <div class="Pixiv" onmouseover="onhoverPixiv(this)" onmouseout="normalPixiv(this)">
+                    <img src="./img/svg/Pixiv_H.svg" alt="/Pixiv_H">
+                    <h6><a href="https://www.pixiv.net/users/8585053"  target="_blank">大麻仙子</a></h6>
                 </div>
             </div>
         </div>
@@ -132,13 +132,13 @@
                                     <!-- <div class="text">Caption Text</div> -->
                                 </div>
                                 <div class="mySlides fade myPic01">
-                                    <img src="./img/Q版02.png" onclick="onClick(this)">
+                                    <img src="./img/Q版02.png" data-lazy="image.jpg" onclick="onClick(this)">
                                 </div>
                                 <div class="mySlides fade myPic01">
-                                    <img src="./img/Q版03.png" onclick="onClick(this)">
+                                    <img src="./img/Q版03.png" data-lazy="image.jpg" onclick="onClick(this)">
                                 </div>
                                 <div class="mySlides fade myPic01">
-                                    <img src="./img/Q版04.png" onclick="onClick(this)">
+                                    <img src="./img/Q版04.png"  data-lazy="image.jpg" onclick="onClick(this)">
                                 </div>
                                 <a class="prev" onclick="plusSlides01(-1)">❮</a>
                                 <a class="next" onclick="plusSlides01(1)">❯</a>
@@ -159,10 +159,10 @@
                                 <!-- <div class="text">Caption Text</div> -->
                             </div>
                             <div class="mySlides fade myPic02">
-                                <img src="img/大頭照02.png" onclick="onClick(this)">
+                                <img src="img/大頭照02.png" data-lazy="image.jpg" onclick="onClick(this)">
                             </div>
                             <div class="mySlides fade myPic02">
-                                <img src="img/大頭照03.jpg" onclick="onClick(this)">
+                                <img src="img/大頭照03.jpg" data-lazy="image.jpg" onclick="onClick(this)">
                             </div>
                             <a class="prev" onclick="plusSlides02(-1)">❮</a>
                             <a class="next" onclick="plusSlides02(1)">❯</a>
@@ -178,23 +178,23 @@
                         <div class="slideshow-container">
                             <div class="slideshow-container-flex">
                                 <div class="mySlides fade myPic03">
-                                    <img src="./img/一般插圖01.jpg" onclick="onClick(this)">
+                                    <img src="./img/一般插圖01.jpg"  onclick="onClick(this)">
                                     <div class="text">點擊看完整圖</div>
                                 </div>
                                 <div class="mySlides fade myPic03">
-                                    <img src="./img/一般插圖02.jpg" onclick="onClick(this)">
+                                    <img src="./img/一般插圖02.jpg" data-lazy="image.jpg" onclick="onClick(this)">
                                     <div class="text">點擊看完整圖</div>
                                 </div>
                                 <div class="mySlides fade myPic03">
-                                    <img src="./img/一般插圖03.jpg" onclick="onClick(this)">
+                                    <img src="./img/一般插圖03.jpg" data-lazy="image.jpg" onclick="onClick(this)">
                                     <div class="text">點擊看完整圖</div>
                                 </div>
                                 <div class="mySlides fade myPic03">
-                                    <img src="./img/一般插圖04.jpg" onclick="onClick(this)">
+                                    <img src="./img/一般插圖04.jpg" data-lazy="image.jpg" onclick="onClick(this)">
                                     <div class="text">點擊看完整圖</div>
                                 </div>
                                 <div class="mySlides fade myPic03">
-                                    <img src="./img/一般插圖05.jpg" onclick="onClick(this)">
+                                    <img src="./img/一般插圖05.jpg" data-lazy="image.jpg" onclick="onClick(this)">
                                     <div class="text">點擊看完整圖</div>
                                 </div>
                                 <a class="prev" onclick="plusSlides03(-1)">❮</a>
@@ -214,19 +214,19 @@
                         <div class="slideshow-container">
                             <div class="slideshow-container-flex">
                                 <div class="mySlides fade myPic04">
-                                    <img src="./img/立繪01.png" onclick="onClick(this)">
+                                    <img src="./img/立繪01.png"  onclick="onClick(this)">
                                     <div class="text">點擊看完整圖</div>
                                 </div>
                                 <div class="mySlides fade myPic04">
-                                    <img src="./img/立繪02.png" onclick="onClick(this)">
+                                    <img src="./img/立繪02.png" data-lazy="image.jpg" onclick="onClick(this)">
                                     <div class="text">點擊看完整圖</div>
                                 </div>
                                 <div class="mySlides fade myPic04">
-                                    <img src="./img/立繪03.png" onclick="onClick(this)">
+                                    <img src="./img/立繪03.png" data-lazy="image.jpg" onclick="onClick(this)">
                                     <div class="text">點擊看完整圖</div>
                                 </div>
                                 <div class="mySlides fade myPic04">
-                                    <img src="./img/立繪04.png" onclick="onClick(this)">
+                                    <img src="./img/立繪04.png"  data-lazy="image.jpg" onclick="onClick(this)">
                                     <div class="text">點擊看完整圖</div>
                                 </div>
                                 <a class="prev" onclick="plusSlides04(-1)">❮</a>
@@ -248,14 +248,14 @@
                                     <img src="./img/精緻稿01.png" onclick="onClick(this)">
                                 </div>
                                 <div class="mySlides fade myPic05">
-                                    <img src="./img/精緻稿02.jpg" onclick="onClick(this)">
+                                    <img src="./img/精緻稿02.jpg" data-lazy="image.jpg" onclick="onClick(this)">
                                     <div class="text">點擊看完整圖</div>
                                 </div>
                                 <div class="mySlides fade myPic05">
-                                    <img src="./img/精緻稿03.jpg" onclick="onClick(this)">
+                                    <img src="./img/精緻稿03.jpg" data-lazy="image.jpg" onclick="onClick(this)">
                                 </div>
                                 <div class="mySlides fade myPic05">
-                                    <img src="./img/精緻稿04.jpg" onclick="onClick(this)">
+                                    <img src="./img/精緻稿04.jpg" data-lazy="image.jpg" onclick="onClick(this)">
                                     <div class="text">點擊看完整圖</div>
                                 </div>
                                 <a class="prev" onclick="plusSlides05(-1)">❮</a>

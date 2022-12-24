@@ -111,27 +111,34 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     flex: 1;
 }
 
 .HBtns{
+    overflow: hidden;
+    position: relative;
+
     display: flex;
     flex-direction: column;
+/*     background-color: aqua; */
 }
 .HBtns>div{
     display: flex;
-    color: var(--myWhite);
-    margin: 20px 0 0 0;
+    margin: 2px 0 0 0;
+}
+
+.fb,.ins,.Pixiv{
+    position: relative;
+    right: -300px;
 }
 
 .HBtns img{
     width: 60px;
-    padding: 0 20px 0 0;
+    padding: 0 10px 0 0;
 }
 .HBtns a{
     text-decoration: none;
-    color: var(--myYellow);
 }
 }
 

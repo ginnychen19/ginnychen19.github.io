@@ -1,24 +1,33 @@
 function onhoverfb(x) {
-    document.querySelector('.fb').src = "./img/svg/facebook_D.svg";
-    document.querySelector('#fb').innerHTML = "伊莉莎白";
+    $('.fb img')[0].src = "./img/svg/facebook_D.svg";
+    $('.fb')[0].style.right = " -180px";
+    $('.fb a')[0].style.color = "var(--myYellow)";
+    $('.fb')[0].style.transition = "1.0s\nease";
 }
 function normalfb(x) {
-    document.querySelector(".fb").src = "./img/svg/facebook_H.svg";
-    document.querySelector("#fb").innerHTML = "";
+    $('.fb img')[0].src = "./img/svg/facebook_H.svg";
+    $('.fb')[0].style.right = " -300px";
+    $('.fb a')[0].style.color = "var(--myWhite)";
 }
 function onhoverins(x) {
-    document.querySelector(".ins").src = "./img/svg/instagram_D.svg";
-    document.querySelector("#ins").innerHTML = "@ginnychen19";
+    $(".ins img")[0].src = "./img/svg/instagram_D.svg";
+    $('.ins')[0].style.right = " -90px";
+    $('.ins a')[0].style.color = "var(--myYellow)";
+    $('.ins')[0].style.transition = "1.0s\nease";
 }
 function normalins(x) {
-    document.querySelector(".ins").src = "./img/svg/instagram_H.svg";
-    document.querySelector("#ins").innerHTML = "";
+    $(".ins img")[0].src = "./img/svg/instagram_H.svg";
+    $('.ins')[0].style.right = " -300px";
+    $('.ins a')[0].style.color = "var(--myWhite)";
 }
 function onhoverPixiv(x) {
-    document.querySelector(".Pixiv").src = "./img/svg/Pixiv_D.svg";
-    document.querySelector("#Pixiv").innerHTML = "大麻仙子";
+    $(".Pixiv img")[0].src = "./img/svg/Pixiv_D.svg";
+    $('.Pixiv')[0].style.right = " -180px";
+    $('.Pixiv a')[0].style.color = "var(--myYellow)";
+    $('.Pixiv')[0].style.transition = "1.0s\nease";
 }
 function normalPixiv(x) {
-    document.querySelector(".Pixiv").src = "./img/svg/Pixiv_H.svg";
-    document.querySelector("#Pixiv").innerHTML = "";
-}
+    $(".Pixiv img")[0].src = "./img/svg/Pixiv_H.svg";
+    $('.Pixiv')[0].style.right = " -300px";
+    $('.Pixiv a')[0].style.color = "var(--myWhite)";
+} 
