@@ -75,7 +75,7 @@ $(document).ready(function () {
     setTimeout(() => {
       $("#LoadingAni").fadeOut(500);
       canvas1.render();
-    }, 20000);
+    }, 2000);
   });
 });
 
