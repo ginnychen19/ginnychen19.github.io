@@ -59,9 +59,13 @@ function Loadedprogress() {
     //console.log(percentage + "%");
     var progresscolor = document.querySelector('.progresscolor');
     var progressimg = document.querySelector('#progress>img');
-    var adjustedPercentage = 100-((percentage - 5) * (95 - 5) / (100 - 5) + 5);
+
+   var adjustedPercentage = 100-percentage;
     progresscolor.style.width = percentage + '%';
-    progressimg.style.right = adjustedPercentage + '%';
+    if(adjustedPercentage >= 8 && adjustedPercentage <= 95){
+      progressimg.style.right = adjustedPercentage + '%';
+    }
+
   })
 }
 

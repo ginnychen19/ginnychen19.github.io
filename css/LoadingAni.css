@@ -60,6 +60,7 @@
         width: 50px;
         position: relative;
         border-radius: 20px;
+        right: 92%;
 
         transition: 0.1s ease;
     }
