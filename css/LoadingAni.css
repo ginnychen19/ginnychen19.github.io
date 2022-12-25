@@ -42,22 +42,31 @@
     div#progress>div{
         border-radius: 20px;
         width: var(--progressWidth); 
-        height: 20px; 
-        background-color: var( --myWhite);
+        height: 25px; 
+        background-color: var(--myWhite);
 
         transition: 1.0s ease;
     }
     div.progresscolor{
+        overflow: clip;
+
         position: relative;
         border-radius: 20px;
-        height: 20px;
-        background-color: var(--myLGreen);
         
+        width:0%;
+        text-align: center;
+        color:var(--myDGreen);
+        font-weight: bold;
+        
+    
+
+        height: 25px;
+        background-color: var(--myLGreen);
         transition: 0.1s ease;
         
     }
     div#progress>img{
-        width: 50px;
+        width: 60px;
         position: relative;
         border-radius: 20px;
         right: 92%;

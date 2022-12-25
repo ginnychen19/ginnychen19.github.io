@@ -57,15 +57,15 @@ function Loadedprogress() {
     // 載入進度百分比
     var percentage = Math.round((instance.progressedCount / instance.images.length) * 100);
     //console.log(percentage + "%");
-    var progresscolor = document.querySelector('.progresscolor');
+    var progresscolor = document.querySelector('div.progresscolor');
     var progressimg = document.querySelector('#progress>img');
+    var adjustedPercentage = 100-percentage;
 
-   var adjustedPercentage = 100-percentage;
     progresscolor.style.width = percentage + '%';
+    progresscolor.innerHTML = percentage + '%';
     if(adjustedPercentage >= 8 && adjustedPercentage <= 95){
       progressimg.style.right = adjustedPercentage + '%';
     }
-
   })
 }
 
