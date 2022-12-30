@@ -34,14 +34,14 @@
         /* background-color: brown; */
     }
 
-    form {
+    .contactMe01 form {
         display: flex;
         flex-direction: column;
         /* background-color: blueviolet; */
         padding: 10px 0 0 0;
     }
 
-    form div {
+    .contactMe01 form div {
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -51,7 +51,7 @@
         font-size: var(--pSTitle);
     }
 
-    input {
+    .contactMe01 input {
         font-family: "GenJyuuGothic-L";
         color: var(--myGreen);
         font-size: var(--pContent);
@@ -64,7 +64,7 @@
         margin: 0 0 20px 0;
     }
 
-    input[type="submit"] {
+    .contactMe01 input[type="submit"] {
         border: none;
         margin: 20px 0 0 0;
         font-family: "GenJyuuGothic-B";
@@ -74,7 +74,7 @@
 
     }
 
-    textarea {
+    .contactMe01 textarea {
         font-family: "GenJyuuGothic-L";
         color: var(--myGreen);
         font-size: var(--pContent);
@@ -111,7 +111,7 @@
         /* background-color: brown; */
     }
 
-    form {
+    .contactMe01 form {
         display: flex;
         flex-direction: column;
         width:80vw;

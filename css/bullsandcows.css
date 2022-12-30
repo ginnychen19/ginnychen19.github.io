@@ -1,0 +1,316 @@
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+@import "main.css";
+
+.Title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    letter-spacing: 10px;
+    color: var(--myWhite);
+    text-shadow: 0 0 10px var(--myLGreen);
+    border-bottom:3px solid var(--myWhite);
+}
+
+#BACgame {
+    display: flex;
+    justify-content: center;
+    /*    background-color: aqua; */
+    padding: 50px 0;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    margin: 0 0 0 50px;
+    /*     background-color: rgb(217, 255, 0); */
+}
+
+.gameBar{
+    display: flex;
+    justify-content: space-between;
+}
+.gameBar>div{
+    display: flex;
+    justify-content: center;
+}
+
+.gameBar>div>button{
+    margin: 0 10px 20px 0;
+}
+
+.gameBar .btn {
+    border: none;
+
+    background-color: var(--myYellow);
+    color: var(--myWhite);
+    font-family: "GenJyuuGothic-B";
+    font-size: var(--pSTitle);
+    padding: 4px 10px;
+
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.gameBar .btn:hover{
+    background-color: var(--myYellowHover);
+    color: var(--myWhite);
+    box-shadow: 0px 0px 5px var(--myWhite);
+    transition: 0.3s ease;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.gameText {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--myYellow);
+
+    border-radius: 20px;
+}
+
+.gameText>div:nth-of-type(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.gameText>div:nth-of-type(1) p {
+    font-family: "GenJyuuGothic-B";
+    font-size: var(--pContent);
+    color: var(--myDGreen);
+}
+
+#passTime {
+    background-color: var(--myWhite);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+#show_check {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    height: 300px;
+    overflow: auto;
+
+    margin: 0 13px;
+    padding: 20px 5px;
+    border-top: 3px solid var(--myWhite);
+
+    font-family: "GenJyuuGothic-B";
+    font-size: var(--pContent);
+    color: var(--myDGreen);
+}
+
+.gameText>div:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+
+    font-family: "GenJyuuGothic-B";
+    font-size: var(--pContent);
+    color: var(--myDGreen);
+}
+
+.gameText>div:nth-of-type(2)>input#input_answer {
+    flex: 4;
+    background-color: var(--myWhite);
+    border-radius: 5px;
+    border: none;
+}
+
+.gameText>div:nth-of-type(2)>button {
+    flex: 1;
+    margin: 0 0 0 20px;
+
+    background-color: var(--myWhite);
+    border: none;
+    border-radius: 8px;
+    padding: 3px 10px;
+
+    transition: 0.3s ease;
+}
+
+.gameText>div:nth-of-type(2)>button:hover {
+    background-color: var(--myLGreen);
+    color: var(--myWhite);
+    box-shadow: 0px 0px 5px var(--myLGreen);
+
+    transition: 0.3s ease;
+}
+
+/*----------------------------------------------------------------------------*/
+
+#Rank {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#Rank>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 30px 30px 30px;
+    width: 65%;
+
+    background-color: var(--myYellow);
+    border-radius: 20px;
+}
+
+.RankText {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    color: var(--myWhite);
+}
+
+.RankText>h4 {
+    border-bottom: 3px var(--myWhite) SOLID;
+    text-shadow: 0px 0px 5px var(--myWhite);
+}
+
+.RankList {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--myWhite);
+    border-radius: 20px;
+    padding: 20px 30px;
+
+    font-family: "GenJyuuGothic-B";
+    font-size: var(--pContent);
+    color: var(--myDGreen);
+}
+
+table {
+    border-collapse: collapse;
+    border: none;
+    text-align: center;
+}
+
+table>thead {
+    font-size: var(--pSTitle);
+}
+
+tr>td:nth-of-type(1) {}
+
+tr>td:nth-of-type(2) {}
+
+tr>td:nth-of-type(3) {}
+
+/*----------------------------------------------------------------------------*/
+
+#register,
+#login {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    /* font-family: "GenJyuuGothic-H";
+    font-size: var(--pLabel); */
+
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(15, 45, 40, 0.9);
+
+}
+
+#register>#close,#login>#close{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 40px;
+    left: 240px;
+    background-color: var(--myWhite);
+    transition: 0.3s ease;
+}
+
+#register>#close:hover,#login>#close:hover{
+    background-color: var(--myLGreen);
+    transition: 0.3s ease;
+}
+
+#register>div,
+#login>div {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--myYellow);
+    box-shadow: 0px 0px 10px var(--myYellow);
+    width: 50%;
+
+
+    padding: 0 30px 30px 30px;
+    border-radius: 20px;
+}
+
+#register>div>h4,
+#login>div>h4 {
+    color: var(--myDGreen);
+}
+
+#register form,
+#login form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#register form>label,
+#login form>label {
+    color: var(--myDGreen);
+    font-family: "GenJyuuGothic-B";
+    font-size: var(--pContent);
+}
+
+#register form>input,
+#login form>input {
+    color: var(--myDGreen);
+    font-family: "GenJyuuGothic-B";
+    font-size: var(--pContent);
+
+    background-color: var(--myWhite);
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+#register form>input[type="submit"],
+#login form>input[type="submit"] {
+    width: 100%;
+    padding: 5px;
+    font-size: var(--pSTitle);
+
+}
+
+#register form>input[type="submit"]:hover,
+#login form>input[type="submit"]:hover {
+    background-color: var(--myLGreen);
+    color: var(--myWhite);
+    box-shadow: 0px 0px 5px var(--myLGreen);
+
+    transition: 0.3s ease;
+}
