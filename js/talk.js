@@ -76,7 +76,7 @@ button01.addEventListener('click', function () {
     ahref01.href = "https://www.facebook.com/";
 });
 button02.addEventListener('click', function () {
-    ahref02.href = "http://127.0.0.1/PHP_ginnychen19.github.io/BullsAndCows.html";
+    ahref02.href = "http://ginnychen19.github.io/BullsAndCows.html";
 });
 
 
