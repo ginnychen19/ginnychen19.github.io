@@ -49,7 +49,7 @@
 
 ### 作品集 
  # 個人插畫委託網頁(插圖作品集)
- - <a href="https://ginnychen19.github.io/" target="blank"><B>大麻教繪</B> (RWD)</a> <BR>
+ - <a href="https://ginnychen19.github.io/"  target="blank"><B>大麻教繪</B> (RWD)</a> <BR>
    <a href="hhttps://ginnychen19.github.io/" target="blank"><img src="https://github.com/ginnychen19/img-folder/blob/2655aefa729f5acf6ef7f6c07bb7e4d199abebef/resuma/ArtCommissionWeb.jpg" width="100%" ><BR></a> <BR>
    ⌞ 不使用任何套件，自己透過HTML、CSS、JS建置一個可互動且具有RWD效果的頁面。<BR>
    ⌞ 網頁所有素材、SVG動畫都是自行繪製。<BR>
@@ -74,8 +74,8 @@
 <BR>
    
 # 菓季-蛋糕手作 | 客製訂購網頁
- - <a href="https://joechen0730.github.io/booknote/" target="blank"><B>菓季-手作 | 客製蛋糕</B> (RWD)</a> <BR>
-   <a href="https://joechen0730.github.io/booknote/" target="blank"><img src="https://github.com/ginnychen19/img-folder/blob/2655aefa729f5acf6ef7f6c07bb7e4d199abebef/resuma/GUOJI_Cake%20.jpg" width="100%" ><BR></a> <BR>
+ - <a href="" target="blank"><B>菓季-手作 | 客製蛋糕</B> (RWD)</a> <BR>
+   <a href="" target="blank"><img src="https://github.com/ginnychen19/img-folder/blob/2655aefa729f5acf6ef7f6c07bb7e4d199abebef/resuma/GUOJI_Cake%20.jpg" width="100%" ><BR></a> <BR>
    ⌞ 負責前端切版：一般蛋糕頁、蛋糕詳細頁、客製蛋糕頁、後臺-一般訂單頁、後臺-客製訂單頁、後臺-會員管理頁。<BR>
    ⌞ 設計 UI/UX 並製作較完整的購物網站流程，含前台跟後台以及購物車頁面等等。<BR>
    ⌞ 網頁畫面、UX主設計、美術素材製作。<BR>
