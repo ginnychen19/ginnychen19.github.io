@@ -13,8 +13,9 @@
 - 前端美編：PS / AI / Figma / CSP(電腦繪圖) / AE
 - 後端相關：PHP / MySQL / Node
 - 版本管理：Git
+
 <BR>
-<BR>
+
 - 01.熟悉 HTML5 ， 熟悉應用 HTML 標籤，熟悉如何切版且不依賴 Bootstrap 切出客戶需求的頁面。<BR>
 - 02.熟悉 CSS3，了解如何正確使用 display(grid、flex、position、z-index、box-model)，熟悉 pseudo element。<BR>
 - 03.熟悉 響應式網頁(RWD)，可不依賴套件並手刻切版；手機、平板、桌電三種適用的頁面。<BR>
