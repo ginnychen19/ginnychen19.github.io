@@ -56,7 +56,7 @@ function Loadedprogress() {
   .progress(function (instance, image) {
     // 載入進度百分比
     var percentage = Math.round((instance.progressedCount / instance.images.length) * 100);
-    //console.log(percentage + "%");
+    console.log(percentage + "%");
     var progresscolor = document.querySelector('div.progresscolor');
     var progressimg = document.querySelector('#progress>img');
     var adjustedPercentage = 100-percentage;
