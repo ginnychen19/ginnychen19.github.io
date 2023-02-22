@@ -62,7 +62,7 @@
 <BR>
 <BR>
    
-   # PHP猜數字小遊戲(插圖作品集)
+   # PHP猜數字小遊戲
  - <a href="https://ginnychen19.github.io/BullsAndCows.html" target="blank"><B>猜數字小遊戲</B> (RWD)</a> <BR>
    <a href="https://ginnychen19.github.io/BullsAndCows.html" target="blank"><img src="https://github.com/ginnychen19/img-folder/blob/2655aefa729f5acf6ef7f6c07bb7e4d199abebef/resuma/BullsAndCows.jpg" width="100%"><BR></a> <BR>
    ⌞ 用Js寫出猜數字小遊戲的整個邏輯判斷。<BR>
