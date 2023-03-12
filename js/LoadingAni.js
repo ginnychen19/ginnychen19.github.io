@@ -1,21 +1,15 @@
-
-/* 
-const loadProgress = (window.performance.timing.loadEventEnd - window.performance.timing.navigationStart) / window.performance.timing.loadEventEnd;
-console.log(`Page load progress: ${loadProgress * 100}%`); 
-
-*/
-import '../confetti-js-master/src/confetti.js';
+import "https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js";
 import "https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js";
 
 var canvas1Settings = {
   target: 'canvas1',
   max: 150,
   size: 1.2,
-  props: ['square',
+  props: [
+    'square',
     'triangle',
-    { 'type': 'svg', 'src': 'img/svg/WdDark.svg' },
   ],
-  colors: [[233, 224, 217], [254, 162, 32], [110, 149, 76]],
+  colors: [[233, 224, 217], [254, 162, 32]],
   clock: 5,
   width: "1900",
   height: "1080",
@@ -23,7 +17,6 @@ var canvas1Settings = {
   respawn: true
 };
 
-var canvas1 = new ConfettiGenerator(canvas1Settings);
 
 
 /* function lazyLoadImages() {
@@ -53,20 +46,20 @@ lazyLoadImages(); */
 /* 取得圖片的載入進度 */
 function Loadedprogress() {
   $(document).imagesLoaded()
-  .progress(function (instance, image) {
-    // 載入進度百分比
-    var percentage = Math.round((instance.progressedCount / instance.images.length) * 100);
-    console.log(percentage + "%");
-    var progresscolor = document.querySelector('div.progresscolor');
-    var progressimg = document.querySelector('#progress>img');
-    var adjustedPercentage = 100-percentage;
+    .progress(function (instance, image) {
+      // 載入進度百分比
+      var percentage = Math.round((instance.progressedCount / instance.images.length) * 100);
+      // console.log(percentage + "%");
+      var progresscolor = document.querySelector('div.progresscolor');
+      var progressimg = document.querySelector('#progress>img');
+      var adjustedPercentage = 100 - percentage;
 
-    progresscolor.style.width = percentage + '%';
-    progresscolor.innerHTML = percentage + '%';
-    if(adjustedPercentage >= 8 && adjustedPercentage <= 95){
-      progressimg.style.right = adjustedPercentage + '%';
-    }
-  })
+      progresscolor.style.width = percentage + '%';
+      progresscolor.innerHTML = percentage + '%';
+      if (adjustedPercentage >= 8 && adjustedPercentage <= 95) {
+        progressimg.style.right = adjustedPercentage + '%';
+      }
+    })
 }
 
 
@@ -74,13 +67,19 @@ function Loadedprogress() {
 
 $(document).ready(function () {
   // 使用 $.fn.imagesLoaded 方法確保所有圖片載入完成
-  $(document).imagesLoaded(function () {
-    Loadedprogress();
-    setTimeout(() => {
-      $("#LoadingAni").fadeOut(500);
-      canvas1.render();
-    }, 2000);
-  });
+  $(document).imagesLoaded()
+    .progress(
+      function () {
+        Loadedprogress();
+        setTimeout(() => {
+          $("#LoadingAni").fadeOut(500);
+
+          var canvas1 = new ConfettiGenerator(canvas1Settings);
+          canvas1.render();
+
+        }, 2000);
+      }
+    )
 });
 
 
