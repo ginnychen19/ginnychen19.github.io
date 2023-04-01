@@ -3,7 +3,6 @@
 - 學歷：亞洲大學/ 數位媒體設計系
 - 住址：台中市
 - E-mail：ginnychen19gmail.com
-- 手機：0971-855-057
 <hr>
 
 ### 專業技能
@@ -25,8 +24,10 @@
 - 07.熟悉製作SVG動畫，也會使用 AfterEffect 製作MG動畫。<BR>
 - 08.理解 AJAX  的操作與應用，可以進行動態頁面渲染。<BR>
 - 09.使用過並基礎了解後端運作，能用 PHP、Node 取用與驗證資料、 會基礎的 MySQL 各指令。<BR> 
-- 10.能使用 React 、node ejs 有效地構建頁面。<BR>
-- 11.習慣使用github桌面板管理專案，但也能使用 Git 版本控制系統。<BR>
+- 10.理解RESTful API，有串接Google Maps API 經驗。<BR>
+- 11.能使用 React 、node ejs 有效地構建頁面。<BR>
+- 12.理解基礎的Vue.component。<BR>
+- 13.習慣使用github桌面板管理專案，但也能使用 Git 版本控制系統。<BR>
 <hr>
 
 ### 自我介紹
