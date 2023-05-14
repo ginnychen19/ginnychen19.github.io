@@ -63,9 +63,10 @@ export class drawCanvas {
         });
     }
     draw = () => {
-        const self = this; 
-        var canterX = 30;
-        var canterY = 30;
+        const self = this;
+        var canterX = 25;
+        var canterY = 25;
+
         $(_canvas02).on("mousedown", openCvs);
         $(_canvas02).on("mouseup", closeCvs);
 
@@ -104,7 +105,7 @@ export class drawCanvas {
         }
         function drawCream(x, y) {
             ctx.save();
-        
+
             if (!self.isEraser) {
                 ctx.globalCompositeOperation = "source-over";
             } else {
@@ -112,7 +113,8 @@ export class drawCanvas {
             }
             ctx.drawImage(self.img,
                 0, 0, 490, 490,
-                x, y, 50*self.scale, 50*self.scale
+                x - canterX * self.scale, y - canterY * self.scale,
+                50 * self.scale, 50 * self.scale
             );
             ctx.restore();
         }
