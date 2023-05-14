@@ -1,0 +1,19 @@
+{
+
+    "typeAcquisition": {
+
+        "include": [
+
+            "./node_modules/@types/jquery"
+
+        ],
+
+        "exclude": [
+
+            "./node_modules"
+
+        ]
+
+    }
+
+}

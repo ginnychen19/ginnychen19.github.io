@@ -1,0 +1,230 @@
+:root {
+    --Cantaloupe01_X: 60px;
+    --Cantaloupe01_Y: 365px;
+
+    --Cantaloupe02_X: 218px;
+    --Cantaloupe02_Y: 413px;
+
+    --Buleberry_X: 258px;
+    --Buleberry_Y: 427px;
+
+    --Cherry01_X: 298px;
+    --Cherry01_Y: 410px;
+
+    --GrapeP_X: 225px;
+    --GrapeP_Y: 455px;
+
+    --GrapeG_X: 270px;
+    --GrapeG_Y: 470px;
+
+    --Kiwi01_X: 115px;
+    --Kiwi01_Y: 562px;
+
+    --Strawberry01_X: 177px;
+    --Strawberry01_Y: 552px;
+
+    --Strawberry02_X: 228px;
+    --Strawberry02_Y: 540px;
+
+    --Orange01_X: 58px;
+    --Orange01_Y: 490px;
+
+    --Orange02_X: 142px;
+    --Orange02_Y: 486px;
+
+    --RoseP_X: 18px;
+    --RoseP_Y: 405px;
+
+    --RoseR_X: 120px;
+    --RoseR_Y: 390px;
+
+    --CarnationP_X: 25px;
+    --CarnationP_Y: 480px;
+
+    --CarnationR_X: 120px;
+    --CarnationR_Y: 480px;
+
+    --Trademark01_X: 20px;
+    --Trademark01_Y: 150px;
+
+    --Trademark02_X: 30px;
+    --Trademark02_Y: 280px;
+
+
+}
+
+.Cantaloupe01 {
+    top: var(--Cantaloupe01_Y);
+    left: var(--Cantaloupe01_X);
+}
+
+.Cantaloupe02 {
+    top: var(--Cantaloupe02_Y);
+    left: var(--Cantaloupe02_X);
+}
+
+.Buleberry {
+    top: var(--Buleberry_Y);
+    left: var(--Buleberry_X);
+}
+
+.Cherry01 {
+    top: var(--Cherry01_Y);
+    left: var(--Cherry01_X);
+}
+
+.GrapeP {
+    top: var(--GrapeP_Y);
+    left: var(--GrapeP_X);
+}
+
+.GrapeG {
+    top: var(--GrapeG_Y);
+    left: var(--GrapeG_X);
+}
+
+.Kiwi01 {
+    top: var(--Kiwi01_Y);
+    left: var(--Kiwi01_X);
+}
+
+.Strawberry01 {
+    top: var(--Strawberry01_Y);
+    left: var(--Strawberry01_X);
+}
+
+.Strawberry02 {
+    top: var(--Strawberry02_Y);
+    left: var(--Strawberry02_X);
+}
+
+.Orange01 {
+    top: var(--Orange01_Y);
+    left: var(--Orange01_X);
+}
+
+.Orange02 {
+    top: var(--Orange02_Y);
+    left: var(--Orange02_X);
+}
+
+.RoseP {
+    top: var(--RoseP_Y);
+    right: var(--RoseP_X);
+}
+
+.RoseR {
+    top: var(--RoseR_Y);
+    right: var(--RoseR_X);
+}
+
+.CarnationP {
+    top: var(--CarnationP_Y);
+    right: var(--CarnationP_X);
+}
+
+.CarnationR {
+    top: var(--CarnationR_Y);
+    right: var(--CarnationR_X);
+}
+
+.Trademark01 {
+    width: 237px;
+    top: var(--Trademark01_Y);
+    right: var(--Trademark01_X);
+}
+
+.Trademark02 {
+    top: var(--Trademark02_Y);
+    right: var(--Trademark02_X);
+}
+
+
+
+
+/*--------------------*/
+.Cantaloupe01_M {
+    top: calc(var(--Cantaloupe01_Y) + 10px);
+    left: calc(var(--Cantaloupe01_X) + 20px);
+}
+
+.Cantaloupe02_M {
+    top: calc(var(--Cantaloupe02_Y) + 10px);
+    left: calc(var(--Cantaloupe02_X) + 20px);
+}
+
+.Buleberry_M {
+    top: calc(var(--Buleberry_Y) + 10px);
+    left: calc(var(--Buleberry_X) + 20px);
+}
+
+.Cherry01_M {
+    top: calc(var(--Cherry01_Y) + 10px);
+    left: calc(var(--Cherry01_X) + 20px);
+}
+
+.GrapeP_M {
+    top: calc(var(--GrapeP_Y) + 10px);
+    left: calc(var(--GrapeP_X) + 20px);
+}
+
+.GrapeG_M {
+    top: calc(var(--GrapeG_Y) + 10px);
+    left: calc(var(--GrapeG_X) + 20px);
+}
+
+.Kiwi01_M {
+    top: calc(var(--Kiwi01_Y) + 10px);
+    left: calc(var(--Kiwi01_X) + 20px);
+}
+
+.Strawberry01_M {
+    top: calc(var(--Strawberry01_Y) + 10px);
+    left: calc(var(--Strawberry01_X) + 20px);
+}
+
+.Strawberry02_M {
+    top: calc(var(--Strawberry02_Y) + 10px);
+    left: calc(var(--Strawberry02_X) + 20px);
+}
+
+.Orange01_M {
+    top: calc(var(--Orange01_Y) + 10px);
+    left: calc(var(--Orange01_X) + 20px);
+}
+
+.Orange02_M {
+    top: calc(var(--Orange02_Y) + 10px);
+    left: calc(var(--Orange02_X) + 20px);
+}
+
+.RoseP_M {
+    top: calc(var(--RoseP_Y) + 10px);
+    right: calc(var(--RoseP_X) + 20px);
+}
+
+.RoseR_M {
+    top: calc(var(--RoseR_Y) + 10px);
+    right: calc(var(--RoseR_X) + 20px);
+}
+
+.CarnationP_M {
+    top: calc(var(--CarnationP_Y) + 10px);
+    right: calc(var(--CarnationP_X) + 20px);
+}
+
+.CarnationR_M {
+    top: calc(var(--CarnationR_Y) + 10px);
+    right: calc(var(--CarnationR_X) + 20px);
+}
+
+.Trademark01_M {
+    width: 237px;
+    top: calc(var(--Trademark01_Y) + 10px);
+    right: calc(var(--Trademark01_X) + 20px);
+}
+
+.Trademark02_M {
+    top: calc(var(--Trademark02_Y) + 10px);
+    right: calc(var(--Trademark02_X) + 20px);
+}
