@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376.16 376.16">
+  <defs>
+    <style>
+      .cls-0 {
+        fill: #fff1c5;
+        /* filter: drop-shadow(inset 30px 0px 30px rgba(0, 0, 0, 0.6)); */
+      }
+    </style>
+    <filter id="inset-shadow">
+      <feOffset dx="15" dy="15" /> <!-- Shadow Offset -->
+      <feGaussianBlur stdDeviation="8" result="offset-blur" /> <!-- Shadow Blur -->
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse" />
+      <!-- Invert the drop shadow to create an inner shadow -->
+      <feFlood flood-color="black" flood-opacity="1" result="color" /> <!-- Color & Opacity -->
+      <feComposite operator="in" in="color" in2="inverse" result="shadow" /> <!-- Clip color inside shadow -->
+      <feComponentTransfer in="shadow" result="shadow">
+        <!-- Shadow Opacity -->
+        <feFuncA type="linear" slope=".75" />
+      </feComponentTransfer>
+      <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
+      <!-- Put shadow over original object -->
+    </filter>
+
+  </defs>
+  <path class="cls-0" filter="url(#inset-shadow)"
+    d="M130.85,73.1c-5.15,97.86-83.48,70.72-83.48,148.43,0,25.19,6.67,44.71,18.3,59.62,9.04,11.6,25.82,12.26,36.49,2.13l32.12-30.52c5.97-5.67,17.06-16.44,22.16-22.89,5.67-7.17,12.21-7.37,9.22,.51-5.09,13.41-50.7,44.92-59.79,68.37-2.26,5.82-1.39,12.32,4.39,14.67,26.65,10.85,71.83,13.92,101.41,8.42,1.57-.29,3.03-.95,4.3-1.91,57.25-43.26,21.59-139.52,32.85-153.43,4.45-5.49,20.66,87.74,.87,130.92-3.17,6.91,3.72,14.18,10.94,11.8,44.57-14.66,68.17-47.36,68.17-87.69,0-133.66-195.42-196.56-197.95-148.43Z" />
+</svg>
