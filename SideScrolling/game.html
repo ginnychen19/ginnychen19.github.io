@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>橫向卷軸遊戲</title>
+    <link rel="stylesheet" href="./game/RunGame.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="./modernizr-1.6.min.js"></script>
+</head>
+
+<body>
+    <!-- <div class="gameUI" style="width:900px;height:500px;">
+        <div>
+            <div id="Splash">
+                enemy_spider_big
+            </div>
+            <div id="PlayMethod">
+                ee
+            </div>
+            <div id="Setting">
+                eee
+            </div>
+            <div id="Fail">
+                eee
+            </div>
+            <div id="Secces">
+                eee
+            </div>
+        </div>
+    </div> -->
+    <div class="canvas">
+        <section class="One">
+            <h3>遊戲：</h3>
+            <canvas id="canvas1" width="600" height="600">
+                your browser does not support html5 canvas
+            </canvas>
+        </section>
+
+        <section class="Two">
+            <table>
+                <thead>
+                    <tr>
+                        <td>操作方式</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>移動：</td>
+                        <td>左右鍵</td>
+                    </tr>
+                    <tr>
+                        <td>跳躍：</td>
+                        <td>上鍵</td>
+                    </tr>
+                    <tr>
+                        <td>目標任務：</td>
+                        <td>攻擊飛行目標，躲開地上目標</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <img id="myplayer" src="./img/dog_game/player.png">
+        <img id="layer1" src="./img/dog_game/layer-1.png">
+        <img id="layer2" src="./img/dog_game/layer-2.png">
+        <img id="layer3" src="./img/dog_game/layer-3.png">
+        <img id="layer4" src="./img/dog_game/layer-4.png">
+        <img id="layer5" src="./img/dog_game/layer-5.png">
+        <img id="enemy_fly" src="./img/dog_game/enemy_fly.png">
+        <img id="enemy_plant" src="./img/dog_game/enemy_plant.png">
+        <img id="enemy_spider_big" src="./img/dog_game/enemy_spider_big.png">
+        <img id="lives" src="./img/dog_game/lives.png">
+        <img id="Settings" src="./img/setting/setting_all_120.png">
+        <audio id="bgm_Splash" src="./sound/bgm_Splash .mp3"></audio>
+        <audio id="bgm_Game" src="./sound/bgm_Game.mp3"></audio>
+        <audio id="collect" src="./sound/collect.mp3"></audio>
+        <audio id="fail" src="./sound/fail.wav"></audio>
+        <audio id="win" src="./sound/win.wav"></audio>
+        <audio id="jump" src="./sound/jump.mp3"></audio>
+        <audio id="walk" src="./sound/walk.mp3"></audio>
+    </div>
+    <addAudio id="addAudio"></addAudio>
+
+    <script type="module" src="./game/main.js"></script>
+
+</body>
+
+</html>

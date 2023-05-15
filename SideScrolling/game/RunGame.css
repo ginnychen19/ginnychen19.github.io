@@ -1,0 +1,121 @@
+:root {
+    --color01: #F7F8F8;
+    --color02: #B5B6B6;
+    --color03: #9FA0A0;
+    --color04: #898989;
+    --color05: #727171;
+    --color06: #525152;
+
+
+    --BTN_Red: #e3344b;
+    --BTN_Green: #337e47;
+    --BTN_Yellow: #f39800;
+    --BTN_Blue: #0061f3;
+
+    --pLabel: 80px;
+    --pBTitle: 58px;
+    --pMTitle: 40px;
+    --pSTitle: 28px;
+    --pContent: 18px;
+    --pSContent: 14px;
+
+    --gameUIwidth: 900;
+    --gameUIheight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+body {
+    background-color: var(--color06);
+    padding: 150px;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.gameUI {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #e3344b;
+    border: 1px solid red;
+    font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+}
+
+#Splash {
+    width: var(--gameUIwidth);
+    height: var(--gameUIheight);
+    /* background-color: #525152; */
+    /* width: calc(var(--gameUIwidth)/2);
+    height: calc(var(--gameUIheight)/2); */
+}
+
+
+.canvas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.One {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    color: var(--color01);
+    letter-spacing: 2px;
+    font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+}
+
+.Two {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--color01);
+    letter-spacing: 2px;
+    font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+}
+
+table {
+    min-width: 250px;
+}
+
+#canvas1 {
+    border: 2px solid var(--color06);
+    background-color: var(--color01);
+}
+
+
+
+
+#myplayer,
+#layer5,
+#layer4,
+#layer3,
+#layer2,
+#layer1,
+#enemy_fly,
+#enemy_plant,
+#enemy_spider_big,
+#lives,
+#Settings {
+    display: none;
+}
